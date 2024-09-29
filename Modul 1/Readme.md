@@ -327,7 +327,7 @@ Pada kode di atas, dibuatkan dua class yaitu class Person yang menerima satu par
 
 ## Unguided
 
-### 1. Unguided 1
+### 1. Soal 1
 
 ####  Buatlah program yang dapat menghasilkan pola berbentuk angka seperti di bawah ini, dengan syarat angka yang ditampilkan adalah hasil dari penjumlahan bilangan prima sebelumnya:
 
@@ -454,7 +454,7 @@ Pada bagian ini, fungsi pattern(rows) dipanggil dengan argumen rows = 4, sehingg
 #### Full code Screenshot:
 
 <p align="center">
-  <img src="https://github.com/rizaledc/IPSD-Assigment/blob/main/Modul%201/Assets/Output1.png" alt="Alt Text">
+  <img src="https://github.com/rizaledc/IPSD-Assigment/blob/main/Modul%201/Assets/Soal1.png" alt="Alt Text">
 </p>
 
 #### Screenshot Output
@@ -472,502 +472,789 @@ Baris pertama mencetak 1 bilangan prima.
 Baris kedua mencetak 2 bilangan prima.
 Baris ketiga mencetak 3 bilangan prima, dan seterusnya, sesuai dengan jumlah baris yang ditentukan (rows).
 
-### 2. Unguided 2
+### 2. Soal 2
 
-####  Buatlah versi program Rekursif Tidak Langsung (Indirect Recursion) dari soal nomor 1 di atas!
+####  Buatlah sebuah fungsi yang menerima dua input berupa list angka. Fungsi ini harus mengembalikan sebuah list baru yang berisi elemen dari dua list input yang memiliki indeks ganjil. List baru tersebut juga harus diurutkan secara menurun berdasarkan nilai elemen.
 
 **Kode Program:**
 
-```C++
-#include <iostream>
+```
+# Soal 2
+# Fungsi untuk menggabungkan elemen pada indeks ganjil dari dua daftar
+def index_odd(list1, list2):
+    # Membuat daftar baru yang berisi elemen dari list1 dan list2 yang berada pada indeks ganjil
+    list1_odd = [list1[i] for i in range(1, len(list1), 2)]
+    list2_odd = [list2[i] for i in range(1, len(list2), 2)]
+    
+    # Menggabungkan kedua daftar yang berisi elemen pada indeks ganjil
+    combination = list1_odd + list2_odd
+    combination.sort(reverse=True)
+    
+    # Mengembalikan daftar gabungan yang sudah diurutkan
+    return combination
 
-// Deklarasi kedua fungsi terlebih dahulu
-long long faktorialGenap(int n);
-long long faktorialGanjil(int n);
+input1 = input("Input the first list (separate with commas)")
+input2 = input("Input the second list (separate with commas)")
 
-// Fungsi untuk menghitung faktorial bilangan genap
-long long faktorialGenap(int n) {
-    if (n == 0) 
-        return 1; // basis rekursi
-    else
-        return n * faktorialGanjil(n - 1); // memanggil fungsi faktorialGanjil
-}
+# Mengonversi input pertama menjadi daftar integer, mengabaikan input yang kosong
+list1 = [int(x) for x in input1.split(',') if x.strip()]
+# Mengonversi input kedua menjadi daftar integer, mengabaikan input yang kosong
+list2 = [int(x) for x in input2.split(',') if x.strip()]
 
-// Fungsi untuk menghitung faktorial bilangan ganjil
-long long faktorialGanjil(int n) {
-    if (n == 1) 
-        return 1; // basis rekursi
-    else
-        return n * faktorialGenap(n - 1); // memanggil fungsi faktorialGenap
-}
-
-int main() {
-    int angka;
-    std::cout << "Masukkan bilangan bulat positif: ";
-    std::cin >> angka;
-
-    // Memastikan bahwa angka adalah positif
-    if (angka < 0) {
-        std::cout << "Faktorial tidak didefinisikan untuk bilangan negatif." << std::endl;
-    } else {
-        long long hasil;
-        if (angka % 2 == 0) {
-            hasil = faktorialGenap(angka);
-        } else {
-            hasil = faktorialGanjil(angka);
-        }
-        std::cout << "Hasil Faktorial dari " << angka << " adalah: " << hasil << std::endl;
-    }
-
-    return 0;
-}
+# Memanggil fungsi index_odd dengan kedua daftar dan menyimpan hasilnya
+result = index_odd(list1, list2)
+# Mencetak hasil gabungan yang sudah diurutkan
+print("Result after merger: ", result)
 ```
 
 **Penjelasan:**
 
 #### Bagian 1
 
-```C++
-#include <iostream>
+```
+# Fungsi untuk menggabungkan elemen pada indeks ganjil dari dua daftar
+def index_odd(list1, list2):
+    # Membuat daftar baru yang berisi elemen dari list1 dan list2 yang berada pada indeks ganjil
+    list1_odd = [list1[i] for i in range(1, len(list1), 2)]
+    list2_odd = [list2[i] for i in range(1, len(list2), 2)]
 ```
 
-Library iostream digunakan untuk menjalankan operasi input dan output pada program. Memungkinkan penggunaan fungsi std::cout dan std::cin.
+Fungsi index_odd: Didefinisikan untuk menerima dua parameter, yaitu list1 dan list2. list1_odd dan list2_odd: Masing-masing adalah daftar yang berisi elemen-elemen dari list1 dan list2 yang berada pada indeks ganjil. Menggunakan list comprehension dan fungsi range untuk mengiterasi dari indeks 1 sampai panjang daftar, dengan langkah 2 (yaitu mengambil setiap elemen kedua).
 
 #### Bagian 2
 
-```C++
-long long faktorialGenap(int n);
-long long faktorialGanjil(int n);
+```
+    # Menggabungkan kedua daftar yang berisi elemen pada indeks ganjil
+    combination = list1_odd + list2_odd
+    combination.sort(reverse=True)
+    # Mengembalikan daftar gabungan yang sudah diurutkan
+    return combination
 ```
 
-Dua fungsi ini dideklarasikan terlebih dahulu sebelum definisinya. Fungsi faktorialGenap digunakan untuk menghitung faktorial bilangan genap, dan faktorialGanjil untuk bilangan ganjil.
+- combination: Daftar baru yang merupakan hasil penggabungan dari list1_odd dan list2_odd.
+- combination.sort(reverse=True): Mengurutkan daftar gabungan dalam urutan menurun (descending).
 
 #### Bagian 3
 
-```C++
-long long faktorialGenap(int n) {
-    if (n == 0) 
-        return 1; // basis rekursi
-    else
-        return n * faktorialGanjil(n - 1); // memanggil fungsi faktorialGanjil
-}
+```
+input1 = input("Input the first list (separate with commas)")
+input2 = input("Input the second list (separate with commas)")
+
+# Mengonversi input pertama menjadi daftar integer, mengabaikan input yang kosong
+list1 = [int(x) for x in input1.split(',') if x.strip()]
+# Mengonversi input kedua menjadi daftar integer, mengabaikan input yang kosong
+list2 = [int(x) for x in input2.split(',') if x.strip()]
+
+# Memanggil fungsi index_odd dengan kedua daftar dan menyimpan hasilnya
+result = index_odd(list1, list2)
 ```
 
-Fungsi ini menghitung faktorial bilangan genap secara rekursif. Jika n adalah 0, fungsi mengembalikan 1 sebagai basis rekursi. Jika tidak, fungsi mengalikan n dengan hasil dari faktorialGanjil(n - 1), sehingga terjadi pemanggilan rekursif antara fungsi faktorialGenap dan faktorialGanjil.
+- Input: Meminta pengguna untuk memasukkan dua daftar yang dipisahkan oleh koma. Input ini berupa string.
+- Konversi ke Integer: Masing-masing input dipecah (split) berdasarkan koma menjadi elemen-elemen, dan kemudian setiap elemen yang tidak kosong (setelah dihapus spasi) dikonversi menjadi integer. Ini menghasilkan dua daftar list1 dan list2.
+- Memanggil Fungsi: Fungsi index_odd dipanggil dengan dua daftar yang telah dibuat sebelumnya (list1 dan list2), dan hasilnya disimpan dalam variabel result.
 
 #### Bagian 4
 
-```C++
-long long faktorialGanjil(int n) {
-    if (n == 1) 
-        return 1; // basis rekursi
-    else
-        return n * faktorialGenap(n - 1); // memanggil fungsi faktorialGenap
-}
+```
+# Mencetak hasil gabungan yang sudah diurutkan
+print("Result after merger: ", result)
 ```
 
-Mirip dengan faktorialGenap, fungsi ini menghitung faktorial bilangan ganjil. Jika n adalah 1, fungsi mengembalikan 1 sebagai basis rekursi. Jika tidak, fungsi mengalikan n dengan hasil dari faktorialGenap(n - 1), menciptakan rekursi antara kedua fungsi faktorial.
-
-#### Bagian 5
-
-```C++
-int main() {
-    int angka;
-    std::cout << "Masukkan bilangan bulat positif: ";
-    std::cin >> angka;
-
-    if (angka < 0) {
-        std::cout << "Faktorial tidak didefinisikan untuk bilangan negatif." << std::endl;
-    } else {
-        long long hasil;
-        if (angka % 2 == 0) {
-            hasil = faktorialGenap(angka);
-        } else {
-            hasil = faktorialGanjil(angka);
-        }
-        std::cout << "Hasil Faktorial dari " << angka << " adalah: " << hasil << std::endl;
-    }
-
-    return 0;
-}
-```
-
-Fungsi di atas merupakan fungsi main yang berupa fungsi utama di dalam program yang disebut dengan fungsi main. Fungsi main yang pertama di eksekusi dan memengaruhi tampilan output.
-
-- Program meminta pengguna memasukkan bilangan bulat positif.
-- Jika bilangan negatif, program akan memberikan pesan bahwa faktorial tidak didefinisikan untuk bilangan negatif.
-- Jika positif, program akan menentukan apakah bilangan tersebut genap atau ganjil dan memanggil fungsi faktorial yang sesuai.
-- Hasilnya kemudian dicetak ke konsol.
-
-Secara keseluruhan, program ini memperlihatkan penggunaan rekursi dan pemisahan fungsi berdasarkan kondisi (genap atau ganjil) untuk menghitung faktorial.
+Output Hasil: Mencetak hasil akhir dari gabungan elemen pada indeks ganjil yang telah diurutkan ke layar.
 
 #### Full code Screenshot:
 
 <p align="center">
-  <img src="https://github.com/rizaledc/Praktikum-Struktur-Data-Assigment-Modul-9/blob/main/Modul%209/output/CodeUn2.png" alt="Alt Text">
+  <img src="https://github.com/rizaledc/IPSD-Assigment/blob/main/Modul%201/Assets/Soal2.png" alt="Alt Text">
 </p>
 
 #### Screenshot Output
 
-<p align="center">
-  <img src="https://github.com/rizaledc/Praktikum-Struktur-Data-Assigment-Modul-9/blob/main/Modul%209/output/OutUn2.png" alt="Alt Text">
-</p>
+
 
 #### Penjelasan
 
-Pada output di atas akan sama dengan seperti faktorial di unguided 1. Tapi yang membedakannya pada kode. Jika pengguna memasukkan nilai negatif maka output yang keluar adalah tidak dapat didefinisikan. Untuk bilangan bulat positif dibagi menjadi dua kode seperti positif genap dan ganjil. Jika memasukkan nilai faktorial 5 maka hasilnya adalah 120.
+List Pertama: 50, 45, 85, 76, 55
 
-### 3. Unguided 3
+List Kedua: 7, 18, 26, 31, 45
 
-####  Implementasikan hash table untuk menyimpan data mahasiswa. Setiap mahasiswa memiliki NIM dan nilai. Implementasikan fungsi untuk menambahkan data baru, menghapus data, mencari data berdasarkan NIM, dan mencari data berdasarkan nilai.
+**Proses Eksekusi**
+
+**Menentukan Elemen pada Indeks Ganjil:**
+
+Untuk list1 (50, 45, 85, 76, 55):
+
+- Indeks 0: 50
+
+- Indeks 1: 45 (ganjil)
+
+- Indeks 2: 85
+
+- Indeks 3: 76 (ganjil)
+
+- Indeks 4: 55
+
+Elemen pada indeks ganjil: [45, 76]
+
+Untuk list2 (7, 18, 26, 31, 45):
+
+- Indeks 0: 7
+
+- Indeks 1: 18 (ganjil)
+
+- Indeks 2: 26
+
+- Indeks 3: 31 (ganjil)
+
+- Indeks 4: 45
+
+Elemen pada indeks ganjil: [18, 31]
+
+Menggabungkan dan Mengurutkan:
+
+Gabungan Elemen pada Indeks Ganjil:
+
+Gabungan dari kedua daftar: [45, 76] + [18, 31] menjadi [45, 76, 18, 31].
+
+Mengurutkan dalam Urutan Menurun (Descending):
+
+Setelah diurutkan menjadi [76, 45, 31, 18].
+
+### 3. Soal 3
+
+####  Buat sebuah program untuk mensimulasikan transaksi ATM. Program harus: 
+1. Meminta pengguna memasukkan PIN (dibatasi 3 kali percobaan).
+2. Setelah PIN benar, meminta jumlah penarikan.
+3. Jika saldo kurang dari jumlah yang ditarik, munculkan pesan kesalahan.
+4. Jika penarikan berhasil, tampilkan saldo akhir.
 
 **Kode Program:**
 
-```C++
-#include <iostream>
-#include <unordered_map>
-#include <vector>
-#include <list>
-#include <algorithm>
-#include <optional>
+```
+#Soal 3
 
-using namespace std;
+# Simulasi ATM dengan tabungan dan menu
+import os
 
-struct Mahasiswa {
-    string NIM;
-    int nilai;
-};
+def clear_screen():
+    os.system('cls' if os.name == 'nt' else 'clear')
+    
+def lihat_saldo(id_user):
+    print(f"Saldo Anda saat ini: Rp{users[id_user][1]}")
 
-class HashTable {
-private:
-    unordered_map<int, list<Mahasiswa>> table;
-    int size; // Adding size to keep track of the number of buckets
+users = {}  # Penyimpanan data pengguna berupa dictionary {ID: [PIN, saldo]}
 
-    int hashFunction(string NIM) {
-        int sum = 0;
-        for (char ch : NIM) {
-            sum += ch;
-        }
-        return sum % size; // Using size instead of bucket_count
-    }
+#Mendefinisikan sebuah fungsi untuk membuat akun
+def buat_akun():
+    print("== Buat Akun Tabungan ==")
+    while True:
+        id_user = input("Masukkan ID (kombinasi huruf dan angka): ")
+        if id_user in users:
+            print("ID telah digunakan, gunakan ID lainnya!")
+        elif len(id_user) < 6:
+            print("ID minimal terdiri dari 6 karakter!")
+        else:
+            break
+    while True:
+        pin = input("Buat PIN (4 angka): ")
+        if len(pin) == 4 and pin.isdigit():
+            break
+        else:
+            print("PIN harus terdiri dari 4 angka!")
+    
+    saldo_awal = int(input("Masukkan saldo awal (dalam rupiah): "))
+    users[id_user] = [pin, saldo_awal]
+    print(f"Akun dengan ID {id_user} berhasil dibuat!")
 
-public:
-    HashTable(int size) : size(size) {
-        table.rehash(size);
-    }
+#Mendefinisikan sebuah fungsi untuk masuk ke dalam akun
+def masuk_akun():
+    print("== Masuk Akun Tabungan ==")
+    attempts = 0
+    while attempts < 3:
+        id_user = input("Masukkan ID: ")
+        pin = input("Masukkan PIN: ")
+        if id_user in users and users[id_user][0] == pin:
+            print("Login berhasil!")
+            return id_user
+        else:
+            attempts += 1
+            print(f"ID atau PIN salah. Percobaan {attempts} dari 3.")
+    
+    print("Anda telah salah memasukkan ID atau PIN 3 kali.")
+    return None
 
-    void tambahData(Mahasiswa mhs) {
-        int index = hashFunction(mhs.NIM);
-        table[index].push_back(mhs);
-    }
+#Mendefinisikan sebuah fungsi untuk melakukan setor tunai
+def setor_tunai(id_user):
+    print("== Setor Tunai ==")
+    setor = int(input("Masukkan jumlah setor (kelipatan Rp 50.000): "))
+    if setor % 50000 == 0:
+        users[id_user][1] += setor
+        print(f"Setoran berhasil. Saldo akhir: Rp{users[id_user][1]}")
+    else:
+        print("Setoran harus kelipatan Rp 50.000!")
 
-    void hapusData(string NIM) {
-        int index = hashFunction(NIM);
-        auto& chain = table[index];
-        chain.remove_if([NIM](const Mahasiswa& mhs) { return mhs.NIM == NIM; });
-    }
+#Mendefinisikan sebuah fungsi untuk melakukan tarik tunai
+def tarik_tunai(id_user):
+    print("== Tarik Tunai ==")
+    print("Pilih jumlah penarikan:")
+    print("1. Rp 500.000")
+    print("2. Rp 1.000.000")
+    print("3. Rp 2.000.000")
+    print("4. Jumlah lain")
+    
+    pilihan = input("Masukkan pilihan (1-4): ")
+    
+    if pilihan == "1":
+        tarik = 500000
+    elif pilihan == "2":
+        tarik = 1000000
+    elif pilihan == "3":
+        tarik = 2000000
+    elif pilihan == "4":
+        tarik = int(input("Masukkan jumlah penarikan: "))
+    else:
+        print("Pilihan tidak valid!")
+        return
+    
+    if tarik % 50000 != 0:
+        print("Penarikan harus kelipatan Rp 50.000!")
+        return
+    
+    if users[id_user][1] >= tarik:
+        users[id_user][1] -= tarik
+        print(f"Penarikan berhasil. Saldo akhir: Rp{users[id_user][1]}")
+    else:
+        print("Maaf saldo Anda tidak mencukupi.")
 
-    optional<Mahasiswa> cariDataNIM(string NIM) {
-        int index = hashFunction(NIM);
-        for (auto& mhs : table[index]) {
-            if (mhs.NIM == NIM) {
-                return mhs;
-            }
-        }
-        return nullopt;
-    }
+#Mendefinisikan sebuah fungsi untuk memunculkan menu utama
+def menu_utama():
+    while True:
+        clear_screen()  # Membersihkan layar
+        print("\n=== Selamat Datang di ATM ===")
+        print("ATM ini hanya menyediakan uang selembaran Rp.50.000,00")
+        print("1. Buat Akun Tabungan")
+        print("2. Masuk ke Akun Tabungan")
+        print("3. Keluar")
+        
+        pilihan = input("Masukkan pilihan (1-3): ")
+        
+        if pilihan == "1":
+            clear_screen()  # Membersihkan layar
+            buat_akun()
+        elif pilihan == "2":
+            clear_screen()  # Membersihkan layar
+            id_user = masuk_akun()
+            if id_user:
+                while True:
+                    clear_screen()  # Membersihkan layar
+                    print("\n== Menu Akun Tabungan ==")
+                    print("1. Setor Tunai")
+                    print("2. Tarik Tunai")
+                    print("3. Lihat Saldo")
+                    print("4. Kembali ke Menu Utama")
+                    
+                    sub_pilihan = input("Masukkan pilihan (1-3): ")
+                    
+                    if sub_pilihan == "1":
+                        setor_tunai(id_user)
+                    elif sub_pilihan == "2":
+                        tarik_tunai(id_user)
+                    elif sub_pilihan == "3":
+                        lihat_saldo(id_user)
+                    elif sub_pilihan == "4":
+                        break
+                    else:
+                        print("Pilihan tidak valid!")
+        elif pilihan == "3":
+            print("Terima kasih telah menggunakan ATM kami!")
+            break
+        else:
+            print("Pilihan tidak valid!")
 
-    vector<Mahasiswa> cariDataNilai(int minNilai, int maxNilai) {
-        vector<Mahasiswa> hasil;
-        for (auto& chain : table) {
-            for (auto& mhs : chain.second) {
-                if (mhs.nilai >= minNilai && mhs.nilai <= maxNilai) {
-                    hasil.push_back(mhs);
-                }
-            }
-        }
-        return hasil;
-    }
-
-    void tampilkanMenu() {
-        cout << "1. Tambah Data\n";
-        cout << "2. Hapus Data\n";
-        cout << "3. Cari Data Berdasarkan NIM\n";
-        cout << "4. Cari Data Berdasarkan Nilai\n";
-        cout << "5. Keluar\n";
-        cout << "Masukkan pilihan: ";
-    }
-
-    void tampilkanSubMenuNilai() {
-        cout << "Pilih Rentang Nilai:\n";
-        cout << "1. Nilai kurang dari 80\n";
-        cout << "2. Nilai 80-90\n";
-        cout << "3. Nilai 90-100\n";
-        cout << "Masukkan pilihan: ";
-    }
-};
-
-int main() {
-    HashTable ht(10);
-    int pilihan;
-
-    do {
-        ht.tampilkanMenu();
-        cin >> pilihan;
-        switch (pilihan) {
-            case 1: {
-                Mahasiswa mhsBaru;
-                cout << "Masukkan NIM: ";
-                cin >> mhsBaru.NIM;
-                cout << "Masukkan Nilai: ";
-                cin >> mhsBaru.nilai;
-                ht.tambahData(mhsBaru);
-                break;
-            }
-            case 2: {
-                string NIMHapus;
-                cout << "Masukkan NIM yang akan dihapus: ";
-                cin >> NIMHapus;
-                ht.hapusData(NIMHapus);
-                break;
-            }
-            case 3: {
-                string NIMCari;
-                cout << "Masukkan NIM yang dicari: ";
-                cin >> NIMCari;
-                auto found = ht.cariDataNIM(NIMCari);
-                if (found) {
-                    cout << "NIM: " << found->NIM << ", Nilai: " << found->nilai << endl;
-                } else {
-                    cout << "Data tidak ditemukan." << endl;
-                }
-                break;
-            }
-            case 4: {
-                int subPilihan;
-                ht.tampilkanSubMenuNilai();
-                cin >> subPilihan;
-                vector<Mahasiswa> foundNilai;
-
-                switch (subPilihan) {
-                    case 1:
-                        foundNilai = ht.cariDataNilai(0, 79);
-                        break;
-                    case 2:
-                        foundNilai = ht.cariDataNilai(80, 90);
-                        break;
-                    case 3:
-                        foundNilai = ht.cariDataNilai(91, 100);
-                        break;
-                    default:
-                        cout << "Pilihan tidak valid." << endl;
-                        continue; // Go back to the main menu
-                }
-
-                if (!foundNilai.empty()) {
-                    for (auto& mhs : foundNilai) {
-                        cout << "NIM: " << mhs.NIM << ", Nilai: " << mhs.nilai << endl;
-                    }
-                } else {
-                    cout << "Tidak ada nilai pada rentang ini." << endl;
-                }
-                break;
-            }
-            case 5:
-                cout << "Keluar dari program." << endl;
-                break;
-            default:
-                cout << "Pilihan tidak valid." << endl;
-        }
-    } while (pilihan != 5);
-
-    return 0;
-}
+# Menjalankan program
+menu_utama()
 ```
 
 **Penjelasan:**
 
 #### Bagian 1
 
-```C++
-#include <iostream>
-#include <unordered_map>
-#include <vector>
-#include <list>
-#include <algorithm>
-#include <optional>
-
-using namespace std;
+```
+import os
+def clear_screen():
+    os.system('cls' if os.name == 'nt' else 'clear')
+def lihat_saldo(id_user):
+    print(f"Saldo Anda saat ini: Rp{users[id_user][1]}")
+users = {}  # Penyimpanan data pengguna berupa dictionary {ID: [PIN, saldo]}
 ```
 
-- #include <iostream> Digunakan untuk operasi input dan output. Dalam kode ini, iostream digunakan untuk mencetak menu ke konsol dan membaca input dari pengguna menggunakan cin dan cout.
-- #include <unordered_map> Digunakan untuk menyimpan data dalam struktur tabel hash. Dalam kode ini, unordered_map digunakan untuk menyimpan dan mengelola data mahasiswa dengan kunci integer yang dihasilkan oleh fungsi hash dan nilai berupa list dari struktur Mahasiswa.
-- #include <vector> Digunakan untuk menyimpan kumpulan data dalam bentuk array dinamis. Dalam kode ini, vector digunakan untuk menyimpan dan mengembalikan daftar mahasiswa yang memenuhi kriteria pencarian tertentu, seperti dalam fungsi cariDataNilai.
-- #include <list> Digunakan untuk menyimpan data dalam struktur data list yang memungkinkan penyisipan dan penghapusan elemen dengan cepat. Dalam kode ini, list digunakan sebagai nilai dalam unordered_map untuk menyimpan mahasiswa yang memiliki nilai hash yang sama (collision handling).
-- #include <algorithm> Digunakan untuk operasi algoritma umum seperti pencarian dan pengurutan. Dalam kode ini, algorithm digunakan untuk fungsi remove_if yang digunakan dalam metode hapusData untuk menghapus mahasiswa dari list berdasarkan NIM.
-- #include <optional> Digunakan untuk mengembalikan nilai yang mungkin tidak ada. Dalam kode ini, optional digunakan untuk fungsi cariDataNIM yang mungkin tidak menemukan mahasiswa dengan NIM yang dicari, sehingga mengembalikan nullopt jika mahasiswa tidak ditemukan.
-- using namespace std; digunakan agar tidak perlu mendeklarasikan std lagi disetiap fungsinya.
-
+- Mengimpor modul os untuk dapat menggunakan fungsi yang berkaitan dengan sistem operasi, seperti membersihkan layar.
+- Fungsi ini membersihkan layar terminal. Jika sistem operasi adalah Windows (nt), maka perintah cls digunakan, jika tidak, perintah clear digunakan untuk sistem Unix.
+- Fungsi ini menampilkan saldo pengguna berdasarkan id_user yang diberikan.
+- Menggunakan dictionary users untuk menyimpan informasi pengguna, di mana kunci adalah ID pengguna dan nilai adalah list yang berisi PIN dan saldo.
+  
 #### Bagian 2
 
-```C++
-struct Mahasiswa {
-    string NIM;
-    int nilai;
-};
+```
+def buat_akun():
+    print("== Buat Akun Tabungan ==")
+    while True:
+        id_user = input("Masukkan ID (kombinasi huruf dan angka): ")
+        if id_user in users:
+            print("ID telah digunakan, gunakan ID lainnya!")
+        elif len(id_user) < 6:
+            print("ID minimal terdiri dari 6 karakter!")
+        else:
+            break
+    while True:
+        pin = input("Buat PIN (4 angka): ")
+        if len(pin) == 4 and pin.isdigit():
+            break
+        else:
+            print("PIN harus terdiri dari 4 angka!")
+    
+    saldo_awal = int(input("Masukkan saldo awal (dalam rupiah): "))
+    users[id_user] = [pin, saldo_awal]
+    print(f"Akun dengan ID {id_user} berhasil dibuat!")
 ```
 
-Struktur Mahasiswa menyimpan data mahasiswa yang terdiri dari NIM (Nomor Induk Mahasiswa) dan nilai.
+Fungsi ini meminta pengguna untuk membuat akun baru. Pengguna diminta untuk memasukkan ID dan PIN, serta saldo awal. Validasi dilakukan untuk memastikan ID dan PIN memenuhi syarat yang telah ditentukan.
 
 #### Bagian 3
 
-```C++
-private:
-    unordered_map<int, list<Mahasiswa>> table;
-    int size;
-
-public:
-    HashTable(int size) : size(size) {
-        table.rehash(size);
-    }
+```
+def masuk_akun():
+    print("== Masuk Akun Tabungan ==")
+    attempts = 0
+    while attempts < 3:
+        id_user = input("Masukkan ID: ")
+        pin = input("Masukkan PIN: ")
+        if id_user in users and users[id_user][0] == pin:
+            print("Login berhasil!")
+            return id_user
+        else:
+            attempts += 1
+            print(f"ID atau PIN salah. Percobaan {attempts} dari 3.")
+    
+    print("Anda telah salah memasukkan ID atau PIN 3 kali.")
+    return None
 ```
 
-- table: unordered_map yang menggunakan int sebagai kunci dan list dari Mahasiswa sebagai nilai.
-- size: Jumlah bucket dalam hash table.
-- Konstruktor: Menginisialisasi ukuran tabel hash dan mengatur ulang jumlah bucket.
+Fungsi ini digunakan untuk login ke akun. Pengguna diberikan tiga kesempatan untuk memasukkan ID dan PIN yang benar. Jika login berhasil, id_user dikembalikan; jika tidak, fungsi akan menginformasikan bahwa percobaan login telah habis.
 
 #### Bagian 4
 
-```C++
-int hashFunction(string NIM) {
-    int sum = 0;
-    for (char ch : NIM) {
-        sum += ch;
-    }
-    return sum % size;
-}
+```
+def setor_tunai(id_user):
+    print("== Setor Tunai ==")
+    setor = int(input("Masukkan jumlah setor (kelipatan Rp 50.000): "))
+    if setor % 50000 == 0:
+        users[id_user][1] += setor
+        print(f"Setoran berhasil. Saldo akhir: Rp{users[id_user][1]}")
+    else:
+        print("Setoran harus kelipatan Rp 50.000!")
 ```
 
-Menghitung nilai hash dari NIM dengan menjumlahkan nilai ASCII dari setiap karakter, kemudian di modulo dengan size.
+Fungsi ini memungkinkan pengguna untuk melakukan setor tunai. Pengguna diminta untuk memasukkan jumlah setoran, yang harus merupakan kelipatan Rp 50.000. Jika valid, saldo diperbarui dan ditampilkan.
 
 #### Bagian 5
 
-```C++
-void tambahData(Mahasiswa mhs);
-void hapusData(string NIM);
-optional<Mahasiswa> cariDataNIM(string NIM);
-vector<Mahasiswa> cariDataNilai(int minNilai, int maxNilai);
+```
+def tarik_tunai(id_user):
+    print("== Tarik Tunai ==")
+    print("Pilih jumlah penarikan:")
+    print("1. Rp 500.000")
+    print("2. Rp 1.000.000")
+    print("3. Rp 2.000.000")
+    print("4. Jumlah lain")
+    
+    pilihan = input("Masukkan pilihan (1-4): ")
+    
+    if pilihan == "1":
+        tarik = 500000
+    elif pilihan == "2":
+        tarik = 1000000
+    elif pilihan == "3":
+        tarik = 2000000
+    elif pilihan == "4":
+        tarik = int(input("Masukkan jumlah penarikan: "))
+    else:
+        print("Pilihan tidak valid!")
+        return
+    
+    if tarik % 50000 != 0:
+        print("Penarikan harus kelipatan Rp 50.000!")
+        return
+    
+    if users[id_user][1] >= tarik:
+        users[id_user][1] -= tarik
+        print(f"Penarikan berhasil. Saldo akhir: Rp{users[id_user][1]}")
+    else:
+        print("Maaf saldo Anda tidak mencukupi.")
 ```
 
-- tambahData: Menambahkan data mahasiswa ke dalam tabel.
-- hapusData: Menghapus data mahasiswa berdasarkan NIM.
-- cariDataNIM: Mencari mahasiswa berdasarkan NIM.
-- cariDataNilai: Mencari semua mahasiswa yang nilainya dalam rentang tertentu.
+Fungsi ini digunakan untuk melakukan penarikan tunai. Pengguna dapat memilih dari beberapa jumlah tetap atau memasukkan jumlah lainnya. Validasi dilakukan untuk memastikan bahwa jumlah penarikan adalah kelipatan Rp 50.000 dan saldo mencukupi.
 
 #### Bagian 6
 
-```C++
-int main() {
-    HashTable ht(10);
-    int pilihan;
+```
+def menu_utama():
+    while True:
+        clear_screen()  # Membersihkan layar
+        print("\n=== Selamat Datang di ATM ===")
+        print("ATM ini hanya menyediakan uang selembaran Rp.50.000,00")
+        print("1. Buat Akun Tabungan")
+        print("2. Masuk ke Akun Tabungan")
+        print("3. Keluar")
+        
+        pilihan = input("Masukkan pilihan (1-3): ")
+        
+        if pilihan == "1":
+            clear_screen()  # Membersihkan layar
+            buat_akun()
+        elif pilihan == "2":
+            clear_screen()  # Membersihkan layar
+            id_user = masuk_akun()
+            if id_user:
+                while True:
+                    clear_screen()  # Membersihkan layar
+                    print("\n== Menu Akun Tabungan ==")
+                    print("1. Setor Tunai")
+                    print("2. Tarik Tunai")
+                    print("3. Lihat Saldo")
+                    print("4. Kembali ke Menu Utama")
+                    
+                    sub_pilihan = input("Masukkan pilihan (1-3): ")
+                    
+                    if sub_pilihan == "1":
+                        setor_tunai(id_user)
+                    elif sub_pilihan == "2":
+                        tarik_tunai(id_user)
+                    elif sub_pilihan == "3":
+                        lihat_saldo(id_user)
+                    elif sub_pilihan == "4":
+                        break
+                    else:
+                        print("Pilihan tidak valid!")
+        elif pilihan == "3":
+            print("Terima kasih telah menggunakan ATM kami!")
+            break
+        else:
+            print("Pilihan tidak valid!")
 
-    do {
-        ht.tampilkanMenu();
-        cin >> pilihan;
-        switch (pilihan) {
-            case 1: {
-                Mahasiswa mhsBaru;
-                cout << "Masukkan NIM: ";
-                cin >> mhsBaru.NIM;
-                cout << "Masukkan Nilai: ";
-                cin >> mhsBaru.nilai;
-                ht.tambahData(mhsBaru);
-                break;
-            }
-            case 2: {
-                string NIMHapus;
-                cout << "Masukkan NIM yang akan dihapus: ";
-                cin >> NIMHapus;
-                ht.hapusData(NIMHapus);
-                break;
-            }
-            case 3: {
-                string NIMCari;
-                cout << "Masukkan NIM yang dicari: ";
-                cin >> NIMCari;
-                auto found = ht.cariDataNIM(NIMCari);
-                if (found) {
-                    cout << "NIM: " << found->NIM << ", Nilai: " << found->nilai << endl;
-                } else {
-                    cout << "Data tidak ditemukan." << endl;
-                }
-                break;
-            }
-            case 4: {
-                int subPilihan;
-                ht.tampilkanSubMenuNilai();
-                cin >> subPilihan;
-                vector<Mahasiswa> foundNilai;
-
-                switch (subPilihan) {
-                    case 1:
-                        foundNilai = ht.cariDataNilai(0, 79);
-                        break;
-                    case 2:
-                        foundNilai = ht.cariDataNilai(80, 90);
-                        break;
-                    case 3:
-                        foundNilai = ht.cariDataNilai(91, 100);
-                        break;
-                    default:
-                        cout << "Pilihan tidak valid." << endl;
-                        continue; // Go back to the main menu
-                }
-
-                if (!foundNilai.empty()) {
-                    for (auto& mhs : foundNilai) {
-                        cout << "NIM: " << mhs.NIM << ", Nilai: " << mhs.nilai << endl;
-                    }
-                } else {
-                    cout << "Tidak ada nilai pada rentang ini." << endl;
-                }
-                break;
-            }
-            case 5:
-                cout << "Keluar dari program." << endl;
-                break;
-            default:
-                cout << "Pilihan tidak valid." << endl;
-        }
-    } while (pilihan != 5);
-
-    return 0;
-}
+menu_utama()
 ```
 
-Fungsi di atas merupakan fungsi main yang berupa fungsi utama di dalam program yang disebut dengan fungsi main. Fungsi main yang pertama di eksekusi dan memengaruhi tampilan output.
-
-- Membuat objek HashTable dengan 10 bucket.
-- Menampilkan menu dan memproses input pengguna untuk melakukan operasi seperti tambah, hapus, dan cari data.
+Fungsi ini menampilkan menu utama ATM. Pengguna dapat memilih untuk membuat akun baru, masuk ke akun yang sudah ada, atau keluar dari program. Jika pengguna masuk ke akun, menu tambahan akan muncul untuk melakukan setor tunai, tarik tunai, atau melihat saldo.
 
 #### Full code Screenshot:
 
 <p align="center">
-  <img src="https://github.com/rizaledc/Praktikum-Struktur-Data-Assigment-Modul-9/blob/main/Modul%209/output/CodeUn3.png" alt="Alt Text">
+  <img src="https://github.com/rizaledc/IPSD-Assigment/blob/main/Modul%201/Assets/Soal3.png" alt="Alt Text">
 </p>
 
 #### Screenshot Output
 
-<p align="center">
-  <img src="https://github.com/rizaledc/Praktikum-Struktur-Data-Assigment-Modul-9/blob/main/Modul%209/output/OutUn3.1.png" alt="Alt Text">
-</p>
-<p align="center">
-  <img src="https://github.com/rizaledc/Praktikum-Struktur-Data-Assigment-Modul-9/blob/main/Modul%209/output/OutUn3.2.png" alt="Alt Text">
-</p>
+
 
 #### Penjelasan
 
-Output kode di atas sudah di atur juga dalam fungsi main dimana alurnya sebagai berikut: Pengguna akan melihat 5 buah pilihan --> pengguna dapat memilih --> pilihan 1 untuk menambahkan data --> pilihan 2 untuk menghapus data --> pilihan 3 untuk mencari data dari NIM --> pilihan 4 dapat mencari data berdasarkan rentang nilai --> pilihan 5 menu keluar.
+
+
+### 4. Soal 4
+
+####  Buat sebuah program untuk mensimulasikan transaksi ATM. Program harus: 
+Anda diberikan file CSV berisi data nilai ujian mahasiswa. Tugas Anda adalah menulis
+sebuah program yang:
+1. Membaca file CSV dan menyimpan datanya ke dalam dictionary.
+2. Menghitung rata-rata nilai tiap mahasiswa.
+3. Menampilkan mahasiswa dengan nilai tertinggi dan terendah
+
+**Kode Program:**
+
+```
+#Soal 4
+
+#Mengimport pandas untuk melakukan pembacaan data
+import pandas as pd
+
+#Mendefinisikan sebuah fungsi untuk membaca file csv.
+def read_csv(file):
+    df = pd.read_csv(file)
+    return df
+
+#Mendefinisikan sebuah fungsi untuk menghitung Average (rata-rata) nilai tertinggi dan terendah.
+def count_avg(df):
+    df['AVG'] = df.iloc[:, 1:].mean(axis=1)
+    return df
+
+#Mendefinisikan sebuah fungsi untuk mengetahui nilai min dan max dari data.
+def min_max(df):
+    max_grade = df.loc[df['AVG'].idxmax()]
+    min_grade = df.loc[df['AVG'].idxmin()]
+    return max_grade, min_grade
+
+#Mendefinisikan sebuah fungsi untuk menghitung rata-rata dari seluruh nilai.
+def AVG_all(df):
+    overall_avg = df['AVG'].mean()
+    return overall_avg
+
+#Mendefinisikan sebuah variabel dari fungsi yang telah dibuat
+file = 'siswa_nilai.csv'
+df = read_csv(file)
+df_AVG = count_avg(df)
+max_grade, min_grade = min_max(df_AVG)
+overall_AVG = AVG_all(df_AVG)
+
+print("Rata-rata nilai mahasiswa:")
+print(df_AVG[['Nama Siswa', 'Nilai']])
+
+print("\nMahasiswa dengan nilai tertinggi:")
+print(max_grade[['Nama Siswa', 'AVG']])
+
+print("\nMahasiswa dengan nilai terendah:")
+print(min_grade[['Nama Siswa', 'AVG']])
+
+# Tampilkan rata-rata nilai seluruh mahasiswa
+print(f"\nRata-rata nilai seluruh mahasiswa: {overall_AVG:.2f}")
+```
+
+**Penjelasan**
+
+#### Bagian 1
+
+```
+import pandas as pd
+
+def read_csv(file):
+    df = pd.read_csv(file)
+    return df
+```
+
+- Mengimpor pustaka pandas yang digunakan untuk manipulasi data berbasis tabel, khususnya dalam format DataFrame.
+- Fungsi read_csv digunakan untuk membaca file CSV dan mengonversinya menjadi DataFrame pandas.
+
+#### Bagian 2
+
+```
+def count_avg(df):
+    df['AVG'] = df.iloc[:, 1:].mean(axis=1)
+    return df
+```
+
+Fungsi count_avg menambahkan kolom baru AVG ke dalam DataFrame yang berisi rata-rata nilai dari setiap siswa.
+
+#### Bagian 3
+
+```
+def min_max(df):
+    max_grade = df.loc[df['AVG'].idxmax()]
+    min_grade = df.loc[df['AVG'].idxmin()]
+    return max_grade, min_grade
+```
+
+Fungsi min_max digunakan untuk mencari siswa dengan nilai rata-rata tertinggi dan terendah.
+- df['AVG'].idxmax() mencari indeks (baris) dengan nilai tertinggi di kolom AVG.
+- df['AVG'].idxmin() mencari indeks dengan nilai terendah di kolom AVG.
+- df.loc[] digunakan untuk mengambil data baris sesuai indeks yang ditemukan.
+- Fungsi ini mengembalikan dua DataFrame: satu untuk siswa dengan nilai tertinggi (max_grade) dan satu untuk siswa dengan nilai terendah (min_grade).
+
+#### Bagian 4
+
+```
+def AVG_all(df):
+    overall_avg = df['AVG'].mean()
+    return overall_avg
+```
+
+Fungsi AVG_all menghitung rata-rata keseluruhan dari nilai rata-rata (AVG) semua siswa.
+- df['AVG'].mean() digunakan untuk menghitung rata-rata dari kolom AVG.
+- Rata-rata keseluruhan ini kemudian dikembalikan oleh fungsi.
+
+#### Bagian 5
+
+```
+file = 'siswa_nilai.csv'
+df = read_csv(file)
+df_AVG = count_avg(df)
+max_grade, min_grade = min_max(df_AVG)
+overall_AVG = AVG_all(df_AVG)
+```
+
+- File CSV dibaca menggunakan read_csv(file) dan hasilnya disimpan dalam DataFrame df.
+- Fungsi count_avg(df) dijalankan untuk menambahkan kolom AVG pada DataFrame, disimpan dalam variabel df_AVG.
+- Fungsi min_max(df_AVG) dijalankan untuk menemukan siswa dengan nilai tertinggi dan terendah.
+- Fungsi AVG_all(df_AVG) digunakan untuk menghitung rata-rata keseluruhan nilai semua siswa.
+
+#### Bagian 6
+
+```
+print("Rata-rata nilai mahasiswa:")
+print(df_AVG[['Nama Siswa', 'Nilai']])
+
+print("\nMahasiswa dengan nilai tertinggi:")
+print(max_grade[['Nama Siswa', 'AVG']])
+
+print("\nMahasiswa dengan nilai terendah:")
+print(min_grade[['Nama Siswa', 'AVG']])
+
+# Tampilkan rata-rata nilai seluruh mahasiswa
+print(f"\nRata-rata nilai seluruh mahasiswa: {overall_AVG:.2f}")
+```
+
+Bagian ini mencetak hasil perhitungan:
+- Menampilkan nama siswa beserta nilai rata-rata mereka.
+- Menampilkan informasi siswa dengan nilai tertinggi (max_grade).
+- Menampilkan informasi siswa dengan nilai terendah (min_grade).
+- Mencetak rata-rata keseluruhan nilai semua siswa dengan dua angka desimal.
+
+#### Full code Screenshot:
+
+<p align="center">
+  <img src="https://github.com/rizaledc/IPSD-Assigment/blob/main/Modul%201/Assets/Soal4.png" alt="Alt Text">
+</p>
+
+#### Screenshot Output
+
+
+
+#### Penjelasan
+
+
+### 5. Soal 5
+
+####  Buatlah permainan sederhana menggunakan Python, di mana komputer akan memilih sebuah angka secara acak antara 1 hingga 100, dan pengguna harus menebak angka tersebut. Setiap tebakan yang salah akan memberikan petunjuk apakah angka yang ditebak lebih besar atau lebihkecil dari angka sebenarnya. Batasi jumlah percobaan menjadi 5 kali. Setelah permainan selesai, tampilkan apakah pemain menang atau kalah
+
+**Kode Program:**
+
+```
+#Soal 5
+
+#Mengimport angka random
+import random
+
+#Mendefinisikan sebuah fungsi untuk melakukan permainan penebakan angka.
+def guess_number_game():
+    secret_number = random.randint(1, 100) 
+    max_attempts = 5 
+    attempts = 0
+    lower_bound = 1
+    upper_bound = 100
+
+    #Memunculkan kata-kata di awal permainan.
+    print("Selamat datang di permainan tebak angka!")
+    print(f"Komputer telah memilih angka antara {lower_bound} hingga {upper_bound}.")
+    print(f"Anda memiliki {max_attempts} kali percobaan untuk menebak angka tersebut.")
+
+    #Menggunakan looping while
+    while attempts < max_attempts:
+        print(f"\nIndikator: {lower_bound}-{upper_bound}")
+        guess = int(input(f"Percobaan {attempts + 1}: Masukkan tebakan Anda: "))
+
+        if guess < secret_number:
+            print(f"Jawaban berada di atas angka {guess}.")
+            lower_bound = guess + 1  
+        elif guess > secret_number:
+            print(f"Jawaban berada di bawah angka {guess}.")
+            upper_bound = guess - 1  
+        else:
+            print(f"Selamat! Anda berhasil menebak angka {secret_number} dengan benar!")
+            break
+
+        attempts += 1
+
+    if attempts == max_attempts and guess != secret_number:
+        print(f"\nMaaf, Anda kehabisan percobaan. Angka yang benar adalah {secret_number}.")
+
+    print("Terima kasih sudah bermain!")
+
+#Mendefinisikan fungsi main(utama)
+def main():
+    while True:
+        guess_number_game()  # Run the game
+        choice = input("\nIngin bermain ulang? (ya/tidak): ").lower()
+        if choice != 'ya':
+            print("Terima kasih! Sampai jumpa lagi.")
+            break
+            
+main()
+```
+
+**Penjelasan**
+
+#### Bagian 1
+
+```
+import random
+
+def guess_number_game():
+    secret_number = random.randint(1, 100) 
+    max_attempts = 5 
+    attempts = 0
+    lower_bound = 1
+    upper_bound = 100
+```
+
+Modul random diimpor untuk menghasilkan angka acak. Dalam hal ini, digunakan untuk menentukan angka rahasia yang akan ditebak oleh pemain.
+
+guess_number_game adalah fungsi utama yang menjalankan permainan.
+- secret_number adalah angka acak yang dipilih komputer dalam rentang 1 sampai 100. Angka ini yang harus ditebak pemain.
+- max_attempts = 5 menentukan jumlah maksimum percobaan yang diberikan kepada pemain untuk menebak angka.
+- attempts = 0 adalah penghitung percobaan yang dimulai dari nol.
+- lower_bound dan upper_bound mengatur batas bawah dan atas rentang angka yang harus ditebak oleh pemain, dimulai dari 1 hingga 100.
+
+#### Bagian 2
+
+```
+    print("Selamat datang di permainan tebak angka!")
+    print(f"Komputer telah memilih angka antara {lower_bound} hingga {upper_bound}.")
+    print(f"Anda memiliki {max_attempts} kali percobaan untuk menebak angka tersebut.")
+```
+
+Pesan ini memberikan instruksi kepada pemain mengenai aturan permainan.
+
+#### Bagian 3
+
+```
+    while attempts < max_attempts:
+        print(f"\nIndikator: {lower_bound}-{upper_bound}")
+        guess = int(input(f"Percobaan {attempts + 1}: Masukkan tebakan Anda: "))
+        if guess < secret_number:
+            print(f"Jawaban berada di atas angka {guess}.")
+            lower_bound = guess + 1  
+        elif guess > secret_number:
+            print(f"Jawaban berada di bawah angka {guess}.")
+            upper_bound = guess - 1  
+        else:
+            print(f"Selamat! Anda berhasil menebak angka {secret_number} dengan benar!")
+            break
+    if attempts == max_attempts and guess != secret_number:
+        print(f"\nMaaf, Anda kehabisan percobaan. Angka yang benar adalah {secret_number}.")
+    print("Terima kasih sudah bermain!")
+```
+
+Looping while: selama jumlah percobaan (attempts) masih kurang dari jumlah maksimal percobaan (max_attempts), permainan terus berlanjut.
+- print(f"\nIndikator: {lower_bound}-{upper_bound}"): Menampilkan rentang batas tebakan yang valid (rentang ini akan diperbarui setelah setiap tebakan).
+- guess = int(input(...)): Pemain diminta untuk memasukkan tebakan angka, yang dikonversi ke integer.
+
+#### Bagian 4
+
+```
+def main():
+    while True:
+        guess_number_game()  # Run the game
+        choice = input("\nIngin bermain ulang? (ya/tidak): ").lower()
+        if choice != 'ya':
+            print("Terima kasih! Sampai jumpa lagi.")
+            break
+main()
+```
+
+Fungsi main mengatur logika utama dari permainan dan memberi pemain pilihan untuk bermain lagi atau berhenti.
+- while True:: Permainan terus berjalan sampai pemain memilih untuk berhenti.
+- Setelah permainan selesai, pemain ditanya apakah mereka ingin bermain ulang.
+- Jika pemain memilih "ya", permainan akan dimulai lagi.
+- Jika pemain memilih selain "ya", program mencetak pesan perpisahan dan keluar dari loop menggunakan break.
 
 ## Kesimpulan
 
@@ -975,10 +1262,12 @@ Algoritma rekursif dan hash table adalah dua konsep penting dalam ilmu komputer 
 
 ## Referensi
 
-### Referensi:
+[1] Shaw, Z. A. (2017). *Learn Python the Hard Way: A Very Simple Introduction to the Terrifyingly Beautiful World of Computers and Code*. Addison-Wesley.
 
-1. Shaw, Z. A. (2017). *Learn Python the Hard Way: A Very Simple Introduction to the Terrifyingly Beautiful World of Computers and Code*. Addison-Wesley.
-2. Lutz, M. (2019). *Python Crash Course: A Hands-On, Project-Based Introduction to Programming*. No Starch Press.
-3. McKinney, W. (2017). *Python for Data Analysis: Data Wrangling with Pandas, NumPy, and IPython*. O'Reilly Media.
-4. Zandbergen, P. A. (2020). *Python Scripting for ArcGIS Pro*. Esri Press.
-5. Oliphant, T. E. (2015). *Guide to NumPy*. Createspace Independent Publishing Platform.
+[2] Lutz, M. (2019). *Python Crash Course: A Hands-On, Project-Based Introduction to Programming*. No Starch Press.
+
+[3] McKinney, W. (2017). *Python for Data Analysis: Data Wrangling with Pandas, NumPy, and IPython*. O'Reilly Media.
+
+[4] Zandbergen, P. A. (2020). *Python Scripting for ArcGIS Pro*. Esri Press.
+
+[5] Oliphant, T. E. (2015). *Guide to NumPy*. Createspace Independent Publishing Platform.
