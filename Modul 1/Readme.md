@@ -1256,9 +1256,594 @@ Fungsi main mengatur logika utama dari permainan dan memberi pemain pilihan untu
 - Jika pemain memilih "ya", permainan akan dimulai lagi.
 - Jika pemain memilih selain "ya", program mencetak pesan perpisahan dan keluar dari loop menggunakan break.
 
+#### Full code Screenshot:
+
+<p align="center">
+  <img src="https://github.com/rizaledc/IPSD-Assigment/blob/main/Modul%201/Assets/Soal5.png" alt="Alt Text">
+</p>
+
+#### Screenshot Output
+
+
+
+#### Penjelasan
+
+
+
+### 6. Soal 6
+
+####  Buat fungsi rekursif yang menerima input bilangan bulat `n` dan menghasilkan urutan bilangan seperti berikut ini:
+
+Input: n = 4
+
+Output: 1, 1, 2, 6, 24
+
+**Kode Program:**
+
+```
+#Soal 6
+
+#Mendefinisikan sebuah fungsi untuk membuat bilangan faktorial.
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n*factorial(n-1)
+
+#Mendefinisikan sebuah fungsi untuk mengembalikan faktorial.
+def fac_order(n):
+    if n <= 0:
+        return []
+
+    result = [] #mengumpulkan hasil dalam list
+    for i in range(n + 1):
+        result.append(factorial(i))
+
+    return result
+
+n = 4 #memasukkan nilai 4 sebagai parameter
+output = fac_order(n)
+print(output)
+```
+
+**Penjelasan**
+
+#### Bagian 1
+
+```
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * factorial(n-1)
+```
+
+factorial(n) adalah fungsi rekursif yang menghitung faktorial dari sebuah bilangan. Menggunakan kasus if dan else untuk memberikan dua kondisi yang berbeda.
+
+#### Bagian 2
+
+```
+def fac_order(n):
+    if n <= 0:
+        return []
+    result = []  # mengumpulkan hasil dalam list
+    for i in range(n + 1):
+        result.append(factorial(i))
+    return result
+```
+
+fac_order(n) adalah fungsi yang mengembalikan daftar semua faktorial dari 0 hingga n atau n sebagai parameter. result adalah list kosong yang akan digunakan untuk menyimpan hasil faktorial dari setiap bilangan dari 0 hingga n. Setelah loop selesai, fungsi fac_order(n) akan mengembalikan list result yang berisi semua faktorial dari 0 hingga n.
+
+#### Bagian 3
+
+```
+n = 4  # memasukkan nilai 4 sebagai parameter
+output = fac_order(n)
+print(output)
+```
+
+- Variabel n = 4 berarti kita ingin menghitung faktorial dari 0 hingga 4.
+- output = fac_order(n) memanggil fungsi fac_order(4), yang akan mengembalikan list faktorial dari 0 hingga 4.
+- print(output) menampilkan hasil faktorial dari 0 hingga 4 dalam bentuk list.
+
+#### Full code Screenshot:
+
+<p align="center">
+  <img src="https://github.com/rizaledc/IPSD-Assigment/blob/main/Modul%201/Assets/Soal6.png" alt="Alt Text">
+</p>
+
+#### Screenshot Output
+
+
+
+#### Penjelasan
+
+### 7. Soal 7
+
+####  Buat fungsi rekursif yang menerima input bilangan bulat `n` dan menghasilkan urutan bilangan seperti berikut ini:
+
+Input: n = 4
+
+Output: 1, 1, 2, 6, 24
+
+**Kode Program:**
+
+```
+#Soal 7
+
+#Mendefinisikan sebuah fungsi untuk menentukan minimum koin yang dibutuhkan.
+def min_coins(coins, amount): #Terdapat dua parameter coins, amount
+    dynamic_p = [float('inf')] * (amount + 1)
+    dynamic_p[0] = 0
+    coin_used = [-1] * (amount + 1)  # Array untuk menyimpan koin yang digunakan
+
+    #Membuat looping for
+    for coin in coins:
+        for x in range(coin, amount + 1):
+            if dynamic_p[x - coin] + 1 < dynamic_p[x]:
+                dynamic_p[x] = dynamic_p[x - coin] + 1
+                coin_used[x] = coin  # Simpan koin yang digunakan
+
+    # Jika tidak ada solusi, kembalikan -1
+    if dynamic_p[amount] == float('inf'):
+        return -1, []
+
+    # Mengembalikan jumlah minimum koin dan rincian koin
+    count = dynamic_p[amount]
+    combination = []
+    while amount > 0:
+        combination.append(coin_used[amount])
+        amount -= coin_used[amount]
+
+    return count, combination
+
+#Mendefinisikan sebuah fungsi utama yaitu fungsi main sebagai eksekutor kode
+def main():
+    amount = int(input("Masukkan jumlah uang yang ingin dicapai: "))
+    coins = list(map(int, input("Masukkan koin yang tersedia, pisahkan dengan spasi: ").split()))
+
+    result, combination = min_coins(coins, amount)
+
+    if result != -1:
+        print(f"Jumlah minimum koin yang diperlukan: {result}")
+        print("Koin yang digunakan:", combination)
+    else:
+        print("Tidak ada koin yang memenuhi jumlah tersebut.")
+
+if __name__ == "__main__":
+    main()
+```
+
+**Penjelasan**
+
+#### Bagian 1
+
+```
+def min_coins(coins, amount):
+    dynamic_p = [float('inf')] * (amount + 1)
+    dynamic_p[0] = 0
+    coin_used = [-1] * (amount + 1)  # Array untuk menyimpan koin yang digunakan
+```
+
+Pada kode di atas, dibuatkan fungsi min_coins dengan parameter coins dan amount. dynamic_p: List untuk menyimpan solusi submasalah. Indeks dari list ini merepresentasikan jumlah uang, dan nilai di setiap indeks merepresentasikan jumlah minimum koin yang dibutuhkan untuk mencapai jumlah tersebut. coin_used: List untuk melacak koin yang digunakan untuk mencapai setiap jumlah. Awalnya diisi dengan -1 sebagai tanda tidak ada koin yang digunakan.
+
+#### Bagian 2
+
+```
+    for coin in coins:
+        for x in range(coin, amount + 1):
+            if dynamic_p[x - coin] + 1 < dynamic_p[x]:
+                dynamic_p[x] = dynamic_p[x - coin] + 1
+                coin_used[x] = coin  # Simpan koin yang digunakan
+    if dynamic_p[amount] == float('inf'):
+        return -1, []
+    count = dynamic_p[amount]
+    combination = []
+    while amount > 0:
+        combination.append(coin_used[amount])
+        amount -= coin_used[amount]
+    return count, combination
+```
+
+- Outer loop (for coin in coins): Loop ini iterasi melalui setiap koin yang tersedia.
+- Inner loop (for x in range(coin, amount + 1)): Iterasi ini dimulai dari nilai koin dan berlanjut hingga amount. Setiap nilai x mewakili jumlah uang yang sedang dioptimalkan.
+- Jika nilai dynamic_p[amount] tetap float('inf'), berarti tidak ada kombinasi koin yang bisa mencapai jumlah yang diinginkan. Kembalikan -1 dan list kosong.
+- count: Menyimpan jumlah minimum koin yang diperlukan untuk mencapai amount.
+- combination: List untuk menyimpan koin yang digunakan.
+
+#### Bagian 3
+
+```
+def main():
+    amount = int(input("Masukkan jumlah uang yang ingin dicapai: "))
+    coins = list(map(int, input("Masukkan koin yang tersedia, pisahkan dengan spasi: ").split()))
+    result, combination = min_coins(coins, amount)
+
+    if result != -1:
+        print(f"Jumlah minimum koin yang diperlukan: {result}")
+        print("Koin yang digunakan:", combination)
+    else:
+        print("Tidak ada koin yang memenuhi jumlah tersebut.")
+
+if __name__ == "__main__":
+    main()
+```
+
+Fungsi ini merupakan fungsi utama yang akan mengeksekusi seluruh fungsi yang telah dibuat.
+- amount: Input dari pengguna, yaitu jumlah uang yang ingin dicapai.
+- coins: List dari koin yang tersedia, diambil dari input pengguna.
+Fungsi if __name__ == "__main__": main() memastikan bahwa ketika file dijalankan secara langsung, program akan memanggil fungsi main() dan memulai permainan.
+
+#### Full code Screenshot:
+
+<p align="center">
+  <img src="https://github.com/rizaledc/IPSD-Assigment/blob/main/Modul%201/Assets/Soal7.png" alt="Alt Text">
+</p>
+
+#### Screenshot Output
+
+
+
+#### Penjelasan
+
+### 8. Soal 8
+
+#### Buat sebuah program yang menerima string dari pengguna dan mengonversi string tersebut menjadi sebuah list berisi kata-kata terbalik. 
+
+**Kode Program:**
+
+```
+#Soal 8
+
+#Mendefinisikan sebuah fungsi untuk mereverse string yang diinputkan
+def reverse_string(inp):
+    x = inp.split() #melakukan split pada parameter yang diberikan
+    reversed = [y[::-1] for y in x]
+    return reversed
+
+#Mendefinisikan fungsi utama untuk dieksekusi
+def main():
+    user_inp = input("Tuliskan kalimat atau kata: ")
+    result = reverse_string(user_inp)
+
+    print("Output: ", result)
+
+if __name__=="__main__":
+    main()
+```
+
+**Penjelasan**
+
+#### Bagian 1
+
+```
+def reverse_string(inp):
+    x = inp.split()  # Melakukan split pada parameter yang diberikan
+    reversed = [y[::-1] for y in x]
+    return reversed
+```
+
+Membuat fungsi reverse_string dengan parameter inp. x = inp.split(): Fungsi split() membagi string input berdasarkan spasi, memisahkannya menjadi list dari kata-kata. Misalnya, jika input adalah "Halo Dunia", hasilnya adalah ['Halo', 'Dunia']. reversed = [y[::-1] for y in x]: Ini adalah list comprehension yang melakukan iterasi pada setiap elemen (kata) dalam list x.
+
+#### Bagian 2
+
+```
+def main():
+    user_inp = input("Tuliskan kalimat atau kata: ")
+    result = reverse_string(user_inp)
+
+    print("Output: ", result)
+```
+
+- user_inp = input("Tuliskan kalimat atau kata: "): Meminta input dari pengguna berupa string.
+- result = reverse_string(user_inp): Memanggil fungsi reverse_string dengan input pengguna (user_inp) sebagai argumen, lalu hasilnya disimpan dalam variabel result.
+- print("Output: ", result): Menampilkan hasil pembalikan kata dalam list yang dikembalikan oleh fungsi reverse_string
+
+#### Bagian 3
+
+```
+if __name__=="__main__":
+    main()
+```
+
+Fungsi ini memastikan bahwa program hanya akan menjalankan fungsi main() jika file ini dijalankan secara langsung, bukan diimport sebagai modul.
+
+#### Full code Screenshot:
+
+<p align="center">
+  <img src="https://github.com/rizaledc/IPSD-Assigment/blob/main/Modul%201/Assets/Soal8.png" alt="Alt Text">
+</p>
+
+#### Screenshot Output
+
+
+
+#### Penjelasan
+
+### 9. Soal 9
+
+#### Buat class bernama `Buku` yang memiliki atribut `judul`, `penulis`, dan `tahun_terbit`. Buat method dalam class untuk menampilkan informasi buku, serta method untuk menghitung usia buku berdasarkan tahun saat ini. Buatlah 3 objek dari class `Buku` dan tampilkan informasi serta usia masing-masing buku
+
+**Kode Program:**
+
+```
+#Soal 9
+
+#Membuat sebuah class yang akan terdiri dari beberapa fungsi yang didefinisikan
+class Book:
+    #Mendefinisikan sebuah fungsi yang berisikan beberapa variabel.
+    def __init__(self, title, author, year_published, page_count, edition, publisher):
+        self.title = title
+        self.author = author
+        self.year_published = year_published
+        self.page_count = page_count
+        self.edition = edition
+        self.publisher = publisher
+
+    #Mendefinisikan sebuah fungsi untuk display yang akan muncul di output
+    def display_info(self):
+        return (f"Judul: '{self.title}'\n"
+                f"Penulis: {self.author}\n"
+                f"Tahun Terbit: {self.year_published}\n"
+                f"Tebal Halaman: {self.page_count} halaman\n"
+                f"Cetakan ke: {self.edition}\n"
+                f"Diterbitkan Oleh: {self.publisher}")
+
+    def calculate_age(self, current_year): #fungsi dengan parameter self dan current_year
+        return current_year - self.year_published
+
+    def full_info(self, current_year): #fungsi dengan parameter self dan current_year
+        age = self.calculate_age(current_year)
+        return f"{self.display_info()}\nUsia Buku: {age} tahun\n"
+
+#Mendifinisikan sebuah fungsi main atau fungsi utama untuk melakukan eksekusi pada kode
+def main():
+    # Current year
+    current_year = 2024
+    
+    # Creating objects from the Book class
+    book1 = Book("Belajar Python di Data Science", "Rizal Wahyu Pratama", 2021, 300, 2, "Gramedia")
+    book2 = Book("Data Science untuk Pemula", "Khulika Malkan", 2023, 250, 1, "Elex Media")
+    book3 = Book("Kecerdasan Buatan untuk Pengolahan Data", "Mikhael Setia Budi", 2019, 400, 3, "Mitra Widya")
+
+    # Displaying information and age of each book
+    book_list = [book1, book2, book3]
+    
+    for book in book_list:
+        print(book.full_info(current_year))
+        print("-" * 30)  # Separator for neater output
+
+if __name__ == "__main__":
+    main()
+```
+
+**Penjelasan**
+
+#### Bagian 1
+
+```
+class Book:
+    def __init__(self, title, author, year_published, page_count, edition, publisher):
+        self.title = title
+        self.author = author
+        self.year_published = year_published
+        self.page_count = page_count
+        self.edition = edition
+        self.publisher = publisher
+```
+
+- class Book:: Mendefinisikan sebuah class bernama Book yang akan digunakan untuk menyimpan data terkait buku.
+- __init__(...): Merupakan konstruktor atau inisialisasi kelas. Fungsi ini dipanggil ketika objek dari kelas Book dibuat.
+Parameter title, author, year_published, page_count, edition, dan publisher adalah atribut yang disimpan untuk setiap buku yang dibuat.
+
+#### Bagian 2
+
+```
+def display_info(self):
+    return (f"Judul: '{self.title}'\n"
+            f"Penulis: {self.author}\n"
+            f"Tahun Terbit: {self.year_published}\n"
+            f"Tebal Halaman: {self.page_count} halaman\n"
+            f"Cetakan ke: {self.edition}\n"
+            f"Diterbitkan Oleh: {self.publisher}")
+```
+
+Fungsi ini bertujuan untuk menampilkan informasi dari objek buku dalam format string yang rapi. Fungsi f-string digunakan untuk memasukkan variabel ke dalam string.
+
+#### Bagian 3
+
+```
+def calculate_age(self, current_year):
+    return current_year - self.year_published
+```
+
+Fungsi ini menghitung usia buku berdasarkan tahun publikasi dan tahun saat ini. current_year: Parameter yang digunakan untuk menentukan tahun saat ini. Fungsi mengembalikan selisih antara tahun saat ini dan tahun terbit buku.
+
+#### Bagian 4
+
+```
+def full_info(self, current_year):
+    age = self.calculate_age(current_year)
+    return f"{self.display_info()}\nUsia Buku: {age} tahun\n"
+```
+
+Fungsi ini menggabungkan informasi yang ditampilkan oleh display_info dengan informasi usia buku yang dihitung oleh calculate_age.
+
+#### Bagian 5
+
+```
+def main():
+    current_year = 2024
+    
+    book1 = Book("Belajar Python di Data Science", "Rizal Wahyu Pratama", 2021, 300, 2, "Gramedia")
+    book2 = Book("Data Science untuk Pemula", "Khulika Malkan", 2023, 250, 1, "Elex Media")
+    book3 = Book("Kecerdasan Buatan untuk Pengolahan Data", "Mikhael Setia Budi", 2019, 400, 3, "Mitra Widya")
+
+    book_list = [book1, book2, book3]
+    
+    for book in book_list:
+        print(book.full_info(current_year))
+        print("-" * 30)
+
+if __name__ == "__main__":
+    main()
+```
+
+- current_year = 2024: Variabel untuk tahun saat ini, digunakan dalam perhitungan usia buku. Lalu membuat 3 objek buku yang diinputkan beberapa info. for book in book_list:: Melakukan iterasi untuk setiap buku dalam daftar book_list. Memanggil full_info() untuk menampilkan informasi lengkap dari setiap buku, termasuk usia buku.
+- print("-" * 30): Mencetak garis pemisah agar tampilan output lebih rapi.
+
+#### Full code Screenshot:
+
+<p align="center">
+  <img src="https://github.com/rizaledc/IPSD-Assigment/blob/main/Modul%201/Assets/Soal9.png" alt="Alt Text">
+</p>
+
+#### Screenshot Output
+
+
+
+#### Penjelasan
+
+
+### 10. Soal 10
+
+#### Buatlah program yang mengimplementasikan algoritma pencarian biner, namun dengan modifikasi: algoritma harus bisa mencari nilai di list yang hanya berisi angka genap, dan jika nilai yang dicari adalah angka ganjil, program harus menampilkan pesan bahwa nilai tersebut tidak bisa ditemukan.
+
+**Kode Program:**
+
+```
+#Soal 10
+
+#Mendefinisikan sebuah fungsi yaitu binary_search
+def binary_search(even_numbers, target): #parameter even_numbers, target
+    left, right = 0, len(even_numbers) - 1
+
+    #menggunakan loop while
+    while left <= right:
+        mid = (left + right) // 2
+        
+        if even_numbers[mid] == target:
+            return mid  # Mengembalikan indeks jika ditemukan
+        elif even_numbers[mid] < target:
+            left = mid + 1
+        else:
+            right = mid - 1
+            
+    return -1  # Mengembalikan -1 jika tidak ditemukan
+
+#Mendefinisikan sebuah fungsi untuk membuat even number
+def generate_even_numbers(limit):
+    # Menghasilkan daftar angka genap hingga limit yang ditentukan
+    return [i for i in range(0, limit + 1, 2)]
+
+#Mendefinisikan sebuah fungsi main atau fungsi utama untuk eksekusi seluruh fungsi yang dibuat
+def main():
+    while True:  # Loop utama program
+        # Menerima batas dari pengguna
+        limit = int(input("Masukkan batas atas untuk daftar angka genap: "))
+        
+        # Menghasilkan daftar angka genap
+        even_numbers = generate_even_numbers(limit)
+        
+        # Menerima input dari pengguna
+        target = int(input("Masukkan angka yang ingin dicari: "))
+        
+        # Cek apakah angka yang dicari genap atau ganjil
+        if target % 2 != 0:
+            print("\nNilai yang dicari adalah angka ganjil, pencarian tidak dapat dilakukan.")
+        else:
+            # Melakukan pencarian biner
+            result = binary_search(even_numbers, target)
+            
+            if result != -1:
+                print(f"\nAngka {target} ditemukan pada indeks {result}.")
+            else:
+                print(f"\nAngka {target} tidak ditemukan dalam daftar.")
+
+        # Menanyakan kepada pengguna apakah ingin mengulang program
+        ulang = input("\nApakah Anda ingin mengulang program? (ya/tidak): ").strip().lower()
+        if ulang != 'ya':
+            break
+
+    print("\nTerima kasih telah menggunakan program ini!")
+
+if __name__ == "__main__":
+    main()
+```
+
+**Penjelasan**
+
+#### Bagian 1
+
+```
+def binary_search(even_numbers, target):
+    left, right = 0, len(even_numbers) - 1
+
+    while left <= right:
+        mid = (left + right) // 2
+        
+        if even_numbers[mid] == target:
+            return mid
+        elif even_numbers[mid] < target:
+            left = mid + 1
+        else:
+            right = mid - 1
+            
+    return -1
+```
+
+Membuat fungsi binary_search dengan parameter even_numbers dan target. left dan right: Variabel yang menunjukkan batas kiri dan kanan dari rentang pencarian. Awalnya, left adalah indeks pertama (0) dan right adalah indeks terakhir (len(even_numbers) - 1). Lalu menggunakan loop while yang di dalamnya terdapat pengkondisian menggunakan if dan else.
+
+#### Bagian 2
+
+```
+def generate_even_numbers(limit):
+    return [i for i in range(0, limit + 1, 2)]
+```
+
+Fungsi ini menghasilkan daftar bilangan genap hingga batas yang ditentukan oleh pengguna dengan parameter limit.
+
+#### Bagian 3
+
+```
+def main():
+    while True:
+        limit = int(input("Masukkan batas atas untuk daftar angka genap: "))
+        even_numbers = generate_even_numbers(limit)
+        
+        target = int(input("Masukkan angka yang ingin dicari: "))
+        
+        if target % 2 != 0:
+            print("\nNilai yang dicari adalah angka ganjil, pencarian tidak dapat dilakukan.")
+        else:
+            result = binary_search(even_numbers, target)
+            
+            if result != -1:
+                print(f"\nAngka {target} ditemukan pada indeks {result}.")
+            else:
+                print(f"\nAngka {target} tidak ditemukan dalam daftar.")
+
+        ulang = input("\nApakah Anda ingin mengulang program? (ya/tidak): ").strip().lower()
+        if ulang != 'ya':
+            break
+
+    print("\nTerima kasih telah menggunakan program ini!")
+```
+
+Fungsi main merupakan fungsi yang pertama kali dieksekusi karena merupakan fungsi utama. Dalam fungsi ini terdapat looping yang menggunakan while True dimana di dalamnya terdapat if dan else sebagai pengkondisian. ulang = input(...).strip().lower(): Menanyakan kepada pengguna apakah ingin mengulang program. Jika jawabannya bukan 'ya', program akan keluar dari loop.
+
+#### Bagian 4
+
+```
+if __name__ == "__main__":
+    main()
+```
+
+Kode ini adalah blok standar untuk memastikan bahwa fungsi main() hanya dijalankan jika file ini dijalankan langsung, bukan ketika diimport sebagai modul.
+
 ## Kesimpulan
 
-Algoritma rekursif dan hash table adalah dua konsep penting dalam ilmu komputer yang digunakan untuk memecahkan masalah dengan cara yang efisien. Algoritma rekursif, yang melibatkan fungsi atau prosedur yang memanggil dirinya sendiri, menawarkan solusi elegan dan sederhana untuk masalah yang dapat dibagi menjadi sub-masalah yang lebih kecil, meskipun memerlukan penanganan yang cermat terhadap overhead dan potensi overflow. Di sisi lain, hash table menyediakan cara yang sangat efisien untuk penyimpanan dan pengambilan data dengan waktu akses rata-rata O(1), dengan berbagai metode penanganan tabrakan seperti open hashing (chaining) dan closed hashing (open addressing). Meskipun masing-masing metode memiliki kelebihan dan kekurangan, pemilihan yang tepat bergantung pada konteks penggunaan dan karakteristik data yang akan diproses.
+
 
 ## Referensi
 
