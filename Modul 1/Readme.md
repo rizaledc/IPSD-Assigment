@@ -460,7 +460,7 @@ Pada bagian ini, fungsi pattern(rows) dipanggil dengan argumen rows = 4, sehingg
 #### Screenshot Output
 
 <p align="center">
-  <img src="https://github.com/rizaledc/IPSD-Assigment/blob/main/Modul%201/Assets/Output1.png" alt="Alt Text">
+  <img src="https://github.com/rizaledc/IPSD-Assigment/blob/main/Modul%201/Assets/OP1.png" alt="Alt Text">
 </p> 
 <p align="center">
  Screenshot Output Unguided 1
@@ -570,7 +570,12 @@ Output Hasil: Mencetak hasil akhir dari gabungan elemen pada indeks ganjil yang 
 
 #### Screenshot Output
 
-
+<p align="center">
+  <img src="https://github.com/rizaledc/IPSD-Assigment/blob/main/Modul%201/Assets/OP2.png" alt="Alt Text">
+</p> 
+<p align="center">
+ Screenshot Output Unguided 2
+</p> 
 
 #### Penjelasan
 
@@ -955,11 +960,19 @@ Fungsi ini menampilkan menu utama ATM. Pengguna dapat memilih untuk membuat akun
 
 #### Screenshot Output
 
-
+<p align="center">
+  <img src="https://github.com/rizaledc/IPSD-Assigment/blob/main/Modul%201/Assets/OP3.1.png" alt="Alt Text">
+</p> 
+<p align="center">
+  <img src="https://github.com/rizaledc/IPSD-Assigment/blob/main/Modul%201/Assets/OP3.2.png" alt="Alt Text">
+</p> 
+<p align="center">
+ Screenshot Output Unguided 3
+</p> 
 
 #### Penjelasan
 
-
+Pada output kode di atas, user diminta untuk membuat akun tabungan terlebih dahulu dengan memasukkan ID dan membuat PIN serta memasukkan saldo awal, selanjutnya user dapat masuk ke akun tabungan untuk melakukan transaksi seperti setor tunai, tarik tunai, dan melihat saldo. Apabila dalam proses masuk ke dalam akun terjadi kesalahan melebihi 5 kali maka otomatis user tidak dapat masuk lagi ke dalam akunnya.
 
 ### 4. Soal 4
 
@@ -1116,10 +1129,16 @@ Bagian ini mencetak hasil perhitungan:
 
 #### Screenshot Output
 
-
+<p align="center">
+  <img src="https://github.com/rizaledc/IPSD-Assigment/blob/main/Modul%201/Assets/OP4.png" alt="Alt Text">
+</p> 
+<p align="center">
+ Screenshot Output Unguided 4
+</p> 
 
 #### Penjelasan
 
+Dalam output kode di atas, kita mengetahui bahwa Siswa_7 memperoleh nilai tertinggi yaitu 100 dan Siswa_5 memperoleh nilai terendah. Serta rata-rata nilai seluruh mahasiswa adalah 72.00.
 
 ### 5. Soal 5
 
@@ -1264,11 +1283,16 @@ Fungsi main mengatur logika utama dari permainan dan memberi pemain pilihan untu
 
 #### Screenshot Output
 
-
+<p align="center">
+  <img src="https://github.com/rizaledc/IPSD-Assigment/blob/main/Modul%201/Assets/OP5.png" alt="Alt Text">
+</p> 
+<p align="center">
+ Screenshot Output Unguided 5
+</p> 
 
 #### Penjelasan
 
-
+Dalam program yang telah dibuat terdapat output dimana pada awal Run akan memberikan pesan kepada user. User akan diberikan 5 kali kesempatan untuk menebak angka yang dipilih oleh komputer. Dalam outputnya komputer memberikan indikator atau rentang dari nilai yang dimasukkan user apakah sudah mendekati dengan angka yang dipilih komputer. Jika dalam 5 kali tebakan salah maka akan muncul pesan kehabisan percobaan.
 
 ### 6. Soal 6
 
@@ -1354,9 +1378,16 @@ print(output)
 
 #### Screenshot Output
 
-
+<p align="center">
+  <img src="https://github.com/rizaledc/IPSD-Assigment/blob/main/Modul%201/Assets/OP6.png" alt="Alt Text">
+</p> 
+<p align="center">
+ Screenshot Output Unguided 6
+</p> 
 
 #### Penjelasan
+
+Dalam kode di atas, terdapat output dari nilai faktorialmnya sesuai dengan bentuk kode yang diberikan yang dimulai dengan angka 1.
 
 ### 7. Soal 7
 
@@ -1482,9 +1513,16 @@ Fungsi if __name__ == "__main__": main() memastikan bahwa ketika file dijalankan
 
 #### Screenshot Output
 
-
+<p align="center">
+  <img src="https://github.com/rizaledc/IPSD-Assigment/blob/main/Modul%201/Assets/OP7.png" alt="Alt Text">
+</p> 
+<p align="center">
+ Screenshot Output Unguided 7
+</p> 
 
 #### Penjelasan
+
+Dalam output yang dihasilkan kode di atas, user diminta untuk menuliskan angka koin yang ingin dicapai. User juga memasukkan pecahan angka koin, misal 1, 5, 10, 25. Misalkan angka koin 50 dapat diperoleh dengan kombinasi koin 25 sebanyak 2 koin.
 
 ### 8. Soal 8
 
@@ -1556,9 +1594,16 @@ Fungsi ini memastikan bahwa program hanya akan menjalankan fungsi main() jika fi
 
 #### Screenshot Output
 
-
+<p align="center">
+  <img src="https://github.com/rizaledc/IPSD-Assigment/blob/main/Modul%201/Assets/OP8.png" alt="Alt Text">
+</p> 
+<p align="center">
+ Screenshot Output Unguided 8
+</p> 
 
 #### Penjelasan
+
+Pada output yang dihasilkan, user memasukkan kalimat Saya suka Python dimana ketika kalimat tersebut di reverse akan menghasilkan ayaS akus nohtyP. Hal ini sesuai dengan fungsi yang dibuat dan fungsi main di akhir kode.
 
 ### 9. Soal 9
 
@@ -1700,10 +1745,16 @@ if __name__ == "__main__":
 
 #### Screenshot Output
 
-
+<p align="center">
+  <img src="https://github.com/rizaledc/IPSD-Assigment/blob/main/Modul%201/Assets/OP9.png" alt="Alt Text">
+</p> 
+<p align="center">
+ Screenshot Output Unguided 9
+</p> 
 
 #### Penjelasan
 
+Dalam output kode di atas, telah dibuat 3 jenis data buku. Misalkan data buku pertama dengan judul Belajar Python di Data Science dengan Rizal Wahyu Pratama sebagai penulisnya, tahun terbit 2021 dan lain sebagainya. Seluruh informasi dalam output sudah di atur dalam kode.
 
 ### 10. Soal 10
 
@@ -1840,6 +1891,25 @@ if __name__ == "__main__":
 ```
 
 Kode ini adalah blok standar untuk memastikan bahwa fungsi main() hanya dijalankan jika file ini dijalankan langsung, bukan ketika diimport sebagai modul.
+
+#### Full code Screenshot:
+
+<p align="center">
+  <img src="https://github.com/rizaledc/IPSD-Assigment/blob/main/Modul%201/Assets/Soal10.png" alt="Alt Text">
+</p>
+
+#### Screenshot Output
+
+<p align="center">
+  <img src="https://github.com/rizaledc/IPSD-Assigment/blob/main/Modul%201/Assets/OP10.png" alt="Alt Text">
+</p> 
+<p align="center">
+ Screenshot Output Unguided 10
+</p> 
+
+#### Penjelasan
+
+Pada output kode di atas pengguna diminta memasukkan batas atas angka genap, yang dimasukkan adalah 5000. Lalu, untuk angka yang ingin dicari adalah 2500 yang terletak pada indeks ke 1250. Lalu user diberikan pertanyaan untuk mengulang program atau tidak, dan user memilih tidak.
 
 ## Kesimpulan
 
