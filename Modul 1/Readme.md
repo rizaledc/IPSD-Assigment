@@ -12,11 +12,31 @@
 
 ## Dasar Teori
 
-### A. Algoritma Rekursif
+### A. Python
 
-Algoritma rekursif merupakan metode yang baik serta efektif diekspresikan sebagai rangkaian terbatas untuk melakukan suatu perintah. Algoritma Rekursif terdiri dari dua kata yaitu algoritma dan rekursif [1]. Dimana algoritma menurut Gun Gun Maulana merupakan metode efektif yang diekspresikan sebagai rangkaian terbatas. Algoritma juga merupakan kumpulan perintah untuk menyelesaikan masalah. Menurut Wilis Kaswidjanti, S.SI., M.Kom Rekursif merupakan alat untuk memecahkan masalah dalam suatu fungsi atau procedure yang memanggil dirinya sendiri. Logika rekursif memiliki sebuah parameter yang dapat berguna untuk memaggil dirinya sendiri[2]. Logika ini digunakan untuk menggantikan proses iterasi (perulangan). Definisi menurut Niclaus Wirth : “ An object is said be recursive if it partially consist or is defines in terms of it self”
+### Sejarah Python dan Perkembangannya Hingga Python Versi 3
 
-Perulangan dapat diubah menjadi kode rekursif agar lebih singkat dalam proses kompilasi dan interpretasi. Rekursi dapat diterapkan dalam masalah pengurutan, pencarian, serta penjelajahan yang sering kali diselesaikan dengan kode rekursif sederhana [3]. 
+Python pertama kali dikembangkan oleh **Guido van Rossum** pada akhir tahun 1980-an di **Centrum Wiskunde & Informatica (CWI)** di Belanda dan resmi dirilis pada tahun 1991 . Tujuan utama Python adalah menciptakan bahasa yang sederhana, mudah dipahami, namun tetap kuat dalam hal kemampuan. **Python 1.0** menekankan pada kekonsistenan sintaks yang bersih dan readable, serta menghadirkan fitur-fitur dasar seperti pengelolaan modul, kelas, dan tipe data dinamis [1].
+
+Perkembangan Python semakin pesat dengan dirilisnya **Python 2.0** pada tahun 2000. Salah satu fitur kunci dari Python 2 adalah **garbage collection berbasis cycle-detecting**, yang membuat pengelolaan memori lebih efisien. Selain itu, Python 2.0 juga memperkenalkan fitur **list comprehensions** dan **augmented assignment**, yang menjadikan penulisan kode lebih singkat dan efisien [2]. Namun, Python 2 memiliki keterbatasan, khususnya dalam dukungan internasionalisasi dan pengelolaan tipe data string. Ini mendorong pengembangan Python 3, yang dirilis pada tahun 2008  .
+
+Python 3.0 membawa perubahan mendasar pada arsitektur bahasa ini, yang menyebabkan kompatibilitas ke belakang (backward compatibility) tidak sepenuhnya terjaga. Salah satu perbedaan terbesar adalah cara Python 3 menangani string; Python 3 memperlakukan string sebagai **unicode** secara default, yang meningkatkan kemampuannya dalam penanganan teks multibahasa . Selain itu, Python 3 memperbaiki banyak "quirks" dari versi sebelumnya, seperti penghapusan `print` sebagai keyword dan menjadikannya fungsi, serta pengenalan `type hinting` yang lebih kuat untuk meningkatkan keterbacaan dan pemeliharaan kode [3].
+
+### Mengapa Python Banyak Digunakan oleh Programmer?
+
+Ada beberapa alasan mengapa Python menjadi bahasa pemrograman yang sangat populer. Pertama, Python dikenal dengan **sintaks yang sederhana dan mudah dibaca**, sehingga programmer dari berbagai tingkat pengalaman, terutama pemula, dapat dengan cepat memahami logika program tanpa harus berkutat dengan aturan sintaks yang rumit . Selain itu, Python mendukung **paradigma pemrograman multiparadigm**, termasuk pemrograman berorientasi objek, pemrograman prosedural, dan pemrograman fungsional, sehingga membuatnya sangat fleksibel untuk berbagai jenis proyek .
+
+Kedua, Python memiliki ekosistem yang kaya dengan berbagai **library dan framework** yang memudahkan pengembangan aplikasi secara cepat. Sebagai contoh, dalam bidang **kecerdasan buatan** dan **machine learning**, Python menyediakan pustaka terkenal seperti **TensorFlow**, **Keras**, dan **scikit-learn**, yang membuat pengembangan model AI menjadi lebih mudah dan cepat [4]. Dalam **data science**, pustaka seperti **Pandas** dan **NumPy** menjadi standar de facto untuk analisis dan manipulasi data .
+
+Komunitas Python yang besar dan aktif juga menjadi salah satu alasan mengapa Python sangat populer. Komunitas ini tidak hanya berkontribusi dalam pengembangan Python itu sendiri, tetapi juga menyediakan ribuan tutorial, dokumentasi, dan sumber daya lainnya, sehingga membuat pembelajaran dan penyelesaian masalah menjadi lebih mudah. Selain itu, Python adalah bahasa yang **cross-platform**, yang artinya program yang ditulis di Python dapat berjalan di berbagai sistem operasi seperti Windows, macOS, dan Linux tanpa banyak penyesuaian .
+
+### Contoh Penerapan Python dalam Pemrograman
+
+Salah satu penerapan paling signifikan Python adalah di bidang **data science** dan **big data**. Pustaka seperti **Pandas** digunakan untuk manipulasi data, sedangkan **NumPy** sangat berguna dalam komputasi numerik yang efisien . Python juga menjadi bahasa pilihan dalam **kecerdasan buatan** dan **machine learning**, di mana pustaka seperti **scikit-learn** dan **TensorFlow** mempermudah pengembangan model pembelajaran mesin, mulai dari regresi sederhana hingga jaringan saraf tiruan yang kompleks.
+
+Dalam pengembangan **aplikasi web**, framework **Django** dan **Flask** memungkinkan pengembangan aplikasi dengan cepat dan mudah, sambil tetap mempertahankan skalabilitas dan keamanannya. Django, misalnya, mendukung **ORM (Object-Relational Mapping)** yang mempermudah interaksi dengan database tanpa harus menulis query SQL secara langsung . Sementara Flask lebih ringan dan fleksibel, cocok untuk aplikasi yang lebih kecil atau proyek yang memerlukan kustomisasi lebih mendalam.
+
+Python juga banyak digunakan dalam **automasi sistem**, misalnya untuk menulis skrip yang mengotomatisasi tugas-tugas rutin seperti pemrosesan file, pengelolaan server, hingga crawling data dari web. Dengan dukungan pustaka seperti **Selenium** dan **BeautifulSoup**, Python menjadi alat yang sangat efisien dalam pengembangan bot atau skrip untuk web scraping [5].
 
 <p align="center">
   <img src="https://github.com/rizaledc/Praktikum-Struktur-Data-Assigment-Modul-9/blob/main/Modul%209/output/Gambaran%20Rekursif%20Berjalan.png" alt="Alt Text">
@@ -1183,10 +1203,10 @@ Algoritma rekursif dan hash table adalah dua konsep penting dalam ilmu komputer 
 
 ## Referensi
 
-[1]	S. Setiawan, R. Manurung, and A. Azurat, “Struktur Data dan Algoritma Dasar-dasar Rekursif Devide and Conquer Mengulang : Maximum Contiguous subsequence,” 2010.
+### Referensi:
 
-[2]	R. Munir, “Rekursi dan Relasi Rekurens Rekursi,” Rekursi dan Relasi Rekurens, pp. 1–27, 2020.
-
-[3]	I. P. S. I Gede Wira Kusuma Jaya, Ida Bagus Nyoman Wijana Manuaba, Kadek Ryan Wijaya and I. G. A. G. Pratama Wardhana, I Made Andika Saputra, “Jurnal Ilmu Komputer Indonesia ( JIK ) Vol : 5 , No . 2, November 2020 Jurnal Ilmu Komputer Indonesia ( JIK ) Vol : 5 , No . 2 , November 2020 ISSN ( Print ): 2615-2703 , ISSN ( Online ): 2615-2711,” no. 2, pp. 1–13, 2020.
-
-[4]	G. M. Sridevi, M. V. Ramakrishna, and D. V. Ashoka, “Comprehensive Performance Study of Hashing Functions,” Comput. Sci. J. Mold., vol. 31, no. 2, pp. 183–199, 2023, doi: 10.56415/csjm.v31.10.
+1. Shaw, Z. A. (2017). *Learn Python the Hard Way: A Very Simple Introduction to the Terrifyingly Beautiful World of Computers and Code*. Addison-Wesley.
+2. Lutz, M. (2019). *Python Crash Course: A Hands-On, Project-Based Introduction to Programming*. No Starch Press.
+3. McKinney, W. (2017). *Python for Data Analysis: Data Wrangling with Pandas, NumPy, and IPython*. O'Reilly Media.
+4. Zandbergen, P. A. (2020). *Python Scripting for ArcGIS Pro*. Esri Press.
+5. Oliphant, T. E. (2015). *Guide to NumPy*. Createspace Independent Publishing Platform.
