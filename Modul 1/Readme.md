@@ -327,7 +327,7 @@ Pada kode di atas, dibuatkan dua class yaitu class Person yang menerima satu par
 
 ## Unguided
 
-### 1. Soal 1
+### Soal 1
 
 ####  Buatlah program yang dapat menghasilkan pola berbentuk angka seperti di bawah ini, dengan syarat angka yang ditampilkan adalah hasil dari penjumlahan bilangan prima sebelumnya:
 
@@ -472,7 +472,7 @@ Baris pertama mencetak 1 bilangan prima.
 Baris kedua mencetak 2 bilangan prima.
 Baris ketiga mencetak 3 bilangan prima, dan seterusnya, sesuai dengan jumlah baris yang ditentukan (rows).
 
-### 2. Soal 2
+### Soal 2
 
 ####  Buatlah sebuah fungsi yang menerima dua input berupa list angka. Fungsi ini harus mengembalikan sebuah list baru yang berisi elemen dari dua list input yang memiliki indeks ganjil. List baru tersebut juga harus diurutkan secara menurun berdasarkan nilai elemen.
 
@@ -625,7 +625,7 @@ Mengurutkan dalam Urutan Menurun (Descending):
 
 Setelah diurutkan menjadi [76, 45, 31, 18].
 
-### 3. Soal 3
+### Soal 3
 
 ####  Buat sebuah program untuk mensimulasikan transaksi ATM. Program harus: 
 1. Meminta pengguna memasukkan PIN (dibatasi 3 kali percobaan).
@@ -974,7 +974,7 @@ Fungsi ini menampilkan menu utama ATM. Pengguna dapat memilih untuk membuat akun
 
 Pada output kode di atas, user diminta untuk membuat akun tabungan terlebih dahulu dengan memasukkan ID dan membuat PIN serta memasukkan saldo awal, selanjutnya user dapat masuk ke akun tabungan untuk melakukan transaksi seperti setor tunai, tarik tunai, dan melihat saldo. Apabila dalam proses masuk ke dalam akun terjadi kesalahan melebihi 5 kali maka otomatis user tidak dapat masuk lagi ke dalam akunnya.
 
-### 4. Soal 4
+### Soal 4
 
 ####  Buat sebuah program untuk mensimulasikan transaksi ATM. Program harus: 
 Anda diberikan file CSV berisi data nilai ujian mahasiswa. Tugas Anda adalah menulis
@@ -1140,7 +1140,7 @@ Bagian ini mencetak hasil perhitungan:
 
 Dalam output kode di atas, kita mengetahui bahwa Siswa_7 memperoleh nilai tertinggi yaitu 100 dan Siswa_5 memperoleh nilai terendah. Serta rata-rata nilai seluruh mahasiswa adalah 72.00.
 
-### 5. Soal 5
+### Soal 5
 
 ####  Buatlah permainan sederhana menggunakan Python, di mana komputer akan memilih sebuah angka secara acak antara 1 hingga 100, dan pengguna harus menebak angka tersebut. Setiap tebakan yang salah akan memberikan petunjuk apakah angka yang ditebak lebih besar atau lebihkecil dari angka sebenarnya. Batasi jumlah percobaan menjadi 5 kali. Setelah permainan selesai, tampilkan apakah pemain menang atau kalah
 
@@ -1294,7 +1294,7 @@ Fungsi main mengatur logika utama dari permainan dan memberi pemain pilihan untu
 
 Dalam program yang telah dibuat terdapat output dimana pada awal Run akan memberikan pesan kepada user. User akan diberikan 5 kali kesempatan untuk menebak angka yang dipilih oleh komputer. Dalam outputnya komputer memberikan indikator atau rentang dari nilai yang dimasukkan user apakah sudah mendekati dengan angka yang dipilih komputer. Jika dalam 5 kali tebakan salah maka akan muncul pesan kehabisan percobaan.
 
-### 6. Soal 6
+### Soal 6
 
 ####  Buat fungsi rekursif yang menerima input bilangan bulat `n` dan menghasilkan urutan bilangan seperti berikut ini:
 
@@ -1389,7 +1389,7 @@ print(output)
 
 Dalam kode di atas, terdapat output dari nilai faktorialmnya sesuai dengan bentuk kode yang diberikan yang dimulai dengan angka 1.
 
-### 7. Soal 7
+### Soal 7
 
 ####  Buat fungsi rekursif yang menerima input bilangan bulat `n` dan menghasilkan urutan bilangan seperti berikut ini:
 
@@ -1524,7 +1524,7 @@ Fungsi if __name__ == "__main__": main() memastikan bahwa ketika file dijalankan
 
 Dalam output yang dihasilkan kode di atas, user diminta untuk menuliskan angka koin yang ingin dicapai. User juga memasukkan pecahan angka koin, misal 1, 5, 10, 25. Misalkan angka koin 50 dapat diperoleh dengan kombinasi koin 25 sebanyak 2 koin.
 
-### 8. Soal 8
+### Soal 8
 
 #### Buat sebuah program yang menerima string dari pengguna dan mengonversi string tersebut menjadi sebuah list berisi kata-kata terbalik. 
 
@@ -1605,7 +1605,7 @@ Fungsi ini memastikan bahwa program hanya akan menjalankan fungsi main() jika fi
 
 Pada output yang dihasilkan, user memasukkan kalimat Saya suka Python dimana ketika kalimat tersebut di reverse akan menghasilkan ayaS akus nohtyP. Hal ini sesuai dengan fungsi yang dibuat dan fungsi main di akhir kode.
 
-### 9. Soal 9
+### Soal 9
 
 #### Buat class bernama `Buku` yang memiliki atribut `judul`, `penulis`, dan `tahun_terbit`. Buat method dalam class untuk menampilkan informasi buku, serta method untuk menghitung usia buku berdasarkan tahun saat ini. Buatlah 3 objek dari class `Buku` dan tampilkan informasi serta usia masing-masing buku
 
@@ -1756,7 +1756,7 @@ if __name__ == "__main__":
 
 Dalam output kode di atas, telah dibuat 3 jenis data buku. Misalkan data buku pertama dengan judul Belajar Python di Data Science dengan Rizal Wahyu Pratama sebagai penulisnya, tahun terbit 2021 dan lain sebagainya. Seluruh informasi dalam output sudah di atur dalam kode.
 
-### 10. Soal 10
+### Soal 10
 
 #### Buatlah program yang mengimplementasikan algoritma pencarian biner, namun dengan modifikasi: algoritma harus bisa mencari nilai di list yang hanya berisi angka genap, dan jika nilai yang dicari adalah angka ganjil, program harus menampilkan pesan bahwa nilai tersebut tidak bisa ditemukan.
 
@@ -1913,7 +1913,12 @@ Pada output kode di atas pengguna diminta memasukkan batas atas angka genap, yan
 
 ## Kesimpulan
 
+Fungsi dan Algoritma mencakup konsep-konsep fundamental dalam pemrograman Python, seperti rekursi (pada factorial), pencarian biner (binary_search), dan penggunaan algoritma dinamis (min_coins). Setiap fungsi dirancang untuk menyelesaikan masalah spesifik dengan pendekatan yang efisien. Misalnya: Fungsi binary_search memanfaatkan algoritma pencarian biner untuk mencari angka dalam daftar yang sudah diurutkan.
+Fungsi min_coins menggunakan algoritma dinamis untuk menghitung jumlah minimum koin yang diperlukan untuk mencapai total tertentu.
 
+Pemahaman OOP dalam implementasi class pada soal 9 menunjukkan pemahaman yang baik tentang Object-Oriented Programming (OOP) di Python. Anda mendefinisikan atribut dan metode yang relevan untuk mengelola data dan menampilkan informasi buku.
+
+Penggunaan Python untuk Automasi, bahasa Python digunakan untuk memecahkan masalah-masalah sehari-hari seperti pencarian angka dalam daftar, reverse string, hingga mencari solusi minimal dalam masalah koin. Ini menunjukkan betapa fleksibelnya Python dalam berbagai bidang aplikasi.
 
 ## Referensi
 
