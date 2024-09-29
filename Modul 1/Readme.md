@@ -12,691 +12,465 @@
 
 ## Dasar Teori
 
+<p align="center">
+  <img src="https://github.com/rizaledc/IPSD-Assigment/blob/main/Modul%201/Assets/Gambar1.jpeg" alt="Alt Text">
+</p> 
+<p align="center">
+ Gambar 1. Ilustrasi Programer Python
+</p> 
+
 ### Sejarah Python dan Perkembangannya Hingga Python Versi 3
 
-Python pertama kali dikembangkan oleh **Guido van Rossum** pada akhir tahun 1980-an di **Centrum Wiskunde & Informatica (CWI)** di Belanda dan resmi dirilis pada tahun 1991 . Tujuan utama Python adalah menciptakan bahasa yang sederhana, mudah dipahami, namun tetap kuat dalam hal kemampuan. **Python 1.0** menekankan pada kekonsistenan sintaks yang bersih dan readable, serta menghadirkan fitur-fitur dasar seperti pengelolaan modul, kelas, dan tipe data dinamis [1].
+Python pertama kali dikembangkan oleh Guido van Rossum pada akhir tahun 1980-an di Centrum Wiskunde & Informatica (CWI) di Belanda dan resmi dirilis pada tahun 1991 . Tujuan utama Python adalah menciptakan bahasa yang sederhana, mudah dipahami, namun tetap kuat dalam hal kemampuan. Python 1.0 menekankan pada kekonsistenan sintaks yang bersih dan readable, serta menghadirkan fitur-fitur dasar seperti pengelolaan modul, kelas, dan tipe data dinamis [1].
 
-Perkembangan Python semakin pesat dengan dirilisnya **Python 2.0** pada tahun 2000. Salah satu fitur kunci dari Python 2 adalah **garbage collection berbasis cycle-detecting**, yang membuat pengelolaan memori lebih efisien. Selain itu, Python 2.0 juga memperkenalkan fitur **list comprehensions** dan **augmented assignment**, yang menjadikan penulisan kode lebih singkat dan efisien [2]. Namun, Python 2 memiliki keterbatasan, khususnya dalam dukungan internasionalisasi dan pengelolaan tipe data string. Ini mendorong pengembangan Python 3, yang dirilis pada tahun 2008  .
+Perkembangan Python semakin pesat dengan dirilisnya Python 2.0 pada tahun 2000. Salah satu fitur kunci dari Python 2 adalah garbage collection berbasis cycle-detecting, yang membuat pengelolaan memori lebih efisien. Selain itu, Python 2.0 juga memperkenalkan fitur list comprehensions dan augmented assignment, yang menjadikan penulisan kode lebih singkat dan efisien [2]. Namun, Python 2 memiliki keterbatasan, khususnya dalam dukungan internasionalisasi dan pengelolaan tipe data string. Ini mendorong pengembangan Python 3, yang dirilis pada tahun 2008  .
 
-Python 3.0 membawa perubahan mendasar pada arsitektur bahasa ini, yang menyebabkan kompatibilitas ke belakang (backward compatibility) tidak sepenuhnya terjaga. Salah satu perbedaan terbesar adalah cara Python 3 menangani string; Python 3 memperlakukan string sebagai **unicode** secara default, yang meningkatkan kemampuannya dalam penanganan teks multibahasa . Selain itu, Python 3 memperbaiki banyak "quirks" dari versi sebelumnya, seperti penghapusan `print` sebagai keyword dan menjadikannya fungsi, serta pengenalan `type hinting` yang lebih kuat untuk meningkatkan keterbacaan dan pemeliharaan kode [3].
+Python 3.0 membawa perubahan mendasar pada arsitektur bahasa ini, yang menyebabkan kompatibilitas ke belakang (backward compatibility) tidak sepenuhnya terjaga. Salah satu perbedaan terbesar adalah cara Python 3 menangani string; Python 3 memperlakukan string sebagai unicode secara default, yang meningkatkan kemampuannya dalam penanganan teks multibahasa . Selain itu, Python 3 memperbaiki banyak "quirks" dari versi sebelumnya, seperti penghapusan `print` sebagai keyword dan menjadikannya fungsi, serta pengenalan `type hinting` yang lebih kuat untuk meningkatkan keterbacaan dan pemeliharaan kode [3].
 
 ### Mengapa Python Banyak Digunakan oleh Programmer?
 
-Ada beberapa alasan mengapa Python menjadi bahasa pemrograman yang sangat populer. Pertama, Python dikenal dengan **sintaks yang sederhana dan mudah dibaca**, sehingga programmer dari berbagai tingkat pengalaman, terutama pemula, dapat dengan cepat memahami logika program tanpa harus berkutat dengan aturan sintaks yang rumit . Selain itu, Python mendukung **paradigma pemrograman multiparadigm**, termasuk pemrograman berorientasi objek, pemrograman prosedural, dan pemrograman fungsional, sehingga membuatnya sangat fleksibel untuk berbagai jenis proyek .
+Ada beberapa alasan mengapa Python menjadi bahasa pemrograman yang sangat populer. Pertama, Python dikenal dengan sintaks yang sederhana dan mudah dibaca, sehingga programmer dari berbagai tingkat pengalaman, terutama pemula, dapat dengan cepat memahami logika program tanpa harus berkutat dengan aturan sintaks yang rumit . Selain itu, Python mendukung paradigma pemrograman multiparadigm, termasuk pemrograman berorientasi objek, pemrograman prosedural, dan pemrograman fungsional, sehingga membuatnya sangat fleksibel untuk berbagai jenis proyek .
 
-Kedua, Python memiliki ekosistem yang kaya dengan berbagai **library dan framework** yang memudahkan pengembangan aplikasi secara cepat. Sebagai contoh, dalam bidang **kecerdasan buatan** dan **machine learning**, Python menyediakan pustaka terkenal seperti **TensorFlow**, **Keras**, dan **scikit-learn**, yang membuat pengembangan model AI menjadi lebih mudah dan cepat [4]. Dalam **data science**, pustaka seperti **Pandas** dan **NumPy** menjadi standar de facto untuk analisis dan manipulasi data .
+Kedua, Python memiliki ekosistem yang kaya dengan berbagai library dan framework yang memudahkan pengembangan aplikasi secara cepat. Sebagai contoh, dalam bidang kecerdasan buatan dan machine learning, Python menyediakan pustaka terkenal seperti TensorFlow, Keras, dan scikit-learn, yang membuat pengembangan model AI menjadi lebih mudah dan cepat [4]. Dalam data science, pustaka seperti Pandas dan NumPy menjadi standar de facto untuk analisis dan manipulasi data .
 
-Komunitas Python yang besar dan aktif juga menjadi salah satu alasan mengapa Python sangat populer. Komunitas ini tidak hanya berkontribusi dalam pengembangan Python itu sendiri, tetapi juga menyediakan ribuan tutorial, dokumentasi, dan sumber daya lainnya, sehingga membuat pembelajaran dan penyelesaian masalah menjadi lebih mudah. Selain itu, Python adalah bahasa yang **cross-platform**, yang artinya program yang ditulis di Python dapat berjalan di berbagai sistem operasi seperti Windows, macOS, dan Linux tanpa banyak penyesuaian .
+Komunitas Python yang besar dan aktif juga menjadi salah satu alasan mengapa Python sangat populer. Komunitas ini tidak hanya berkontribusi dalam pengembangan Python itu sendiri, tetapi juga menyediakan ribuan tutorial, dokumentasi, dan sumber daya lainnya, sehingga membuat pembelajaran dan penyelesaian masalah menjadi lebih mudah. Selain itu, Python adalah bahasa yang cross-platform, yang artinya program yang ditulis di Python dapat berjalan di berbagai sistem operasi seperti Windows, macOS, dan Linux tanpa banyak penyesuaian .
 
 ### Contoh Penerapan Python dalam Pemrograman
 
-Salah satu penerapan paling signifikan Python adalah di bidang **data science** dan **big data**. Pustaka seperti **Pandas** digunakan untuk manipulasi data, sedangkan **NumPy** sangat berguna dalam komputasi numerik yang efisien . Python juga menjadi bahasa pilihan dalam **kecerdasan buatan** dan **machine learning**, di mana pustaka seperti **scikit-learn** dan **TensorFlow** mempermudah pengembangan model pembelajaran mesin, mulai dari regresi sederhana hingga jaringan saraf tiruan yang kompleks.
+Salah satu penerapan paling signifikan Python adalah di bidang data science dan big data. Pustaka seperti Pandas digunakan untuk manipulasi data, sedangkan NumPy sangat berguna dalam komputasi numerik yang efisien . Python juga menjadi bahasa pilihan dalam kecerdasan buatan dan machine learning, di mana pustaka seperti scikit-learn dan TensorFlow mempermudah pengembangan model pembelajaran mesin, mulai dari regresi sederhana hingga jaringan saraf tiruan yang kompleks.
 
-Dalam pengembangan **aplikasi web**, framework **Django** dan **Flask** memungkinkan pengembangan aplikasi dengan cepat dan mudah, sambil tetap mempertahankan skalabilitas dan keamanannya. Django, misalnya, mendukung **ORM (Object-Relational Mapping)** yang mempermudah interaksi dengan database tanpa harus menulis query SQL secara langsung . Sementara Flask lebih ringan dan fleksibel, cocok untuk aplikasi yang lebih kecil atau proyek yang memerlukan kustomisasi lebih mendalam.
+Dalam pengembangan aplikasi web, framework Django dan Flask memungkinkan pengembangan aplikasi dengan cepat dan mudah, sambil tetap mempertahankan skalabilitas dan keamanannya. Django, misalnya, mendukung ORM (Object-Relational Mapping) yang mempermudah interaksi dengan database tanpa harus menulis query SQL secara langsung . Sementara Flask lebih ringan dan fleksibel, cocok untuk aplikasi yang lebih kecil atau proyek yang memerlukan kustomisasi lebih mendalam.
 
-Python juga banyak digunakan dalam **automasi sistem**, misalnya untuk menulis skrip yang mengotomatisasi tugas-tugas rutin seperti pemrosesan file, pengelolaan server, hingga crawling data dari web. Dengan dukungan pustaka seperti **Selenium** dan **BeautifulSoup**, Python menjadi alat yang sangat efisien dalam pengembangan bot atau skrip untuk web scraping [5].
+Python juga banyak digunakan dalam automasi sistem, misalnya untuk menulis skrip yang mengotomatisasi tugas-tugas rutin seperti pemrosesan file, pengelolaan server, hingga crawling data dari web. Dengan dukungan pustaka seperti Selenium dan BeautifulSoup, Python menjadi alat yang sangat efisien dalam pengembangan bot atau skrip untuk web scraping [5].
+
+### Variabel dan Tipe Data
+
+Dalam Python kita dapat menyimpan data dalam memori menggunakan variabel. Dalam penulisan variabel terdapat aturan-aturan yang harus diikuti seperti menggunakan huruf, angka, underscore, dan awalan variabel tidak dimulai dengan angka.
+
+```
+x = 10
+y = 3.14
+z = "Data Science"
+
+user_age = 20
+pi_value = 3.14159
+course_name = "Python for Data Science"
+```
+
+Di atas merupakan tipe-tipe data yang ada dalam Python diantaranya:
+
+- Integer (int): Tipe data yang berisi bilangan bulat.
+- Float: Tipe data yang berisikan bilangan desimal.
+- String (str): Kumpulan dari char yang membentuk sebuah kalimat.
+- Boolean (bool): Tipe data yang outputnya True atau False.
+
+```
+#integer (int)
+age = 25
+
+# Floats
+height = 1.67
+
+# Strings
+name = "Rizal"
+
+# Booleans
+is_student = True
+
+print(type(age))
+print(type(height))
+print(type(name))
+print(type(is_student))
+```
+
+### Operator dan Logika
+
+Operator dalam Python sama dengan operator dalam matematika. Berikut operatornya:
+
+#### Operator Aritmatika
+
+Operator yang digunakan seperti berikut:
+
+- +, -, *, / (penjumlahan, pengurangan, kali, bagi)
+- // (pembagian bulat)
+- % (modulus)
+- ** (perpangkatan)
+
+```
+a = 10
+b = 3
+
+# Penjumlahan
+print(a + b)
+
+# Pembagian
+print(a / b)
+
+# Pembagian bulat
+print(a // b)
+
+# Eksponensial
+print(a ** b) 
+```
+
+#### Operator Perbandingan
+
+Operator perbandingan digunakan untuk membandingkan dua nilai yang hasilnya berupa Boolean. Adapun operator perbandingan yang digunakan dalam Python seperti berikut:
+
+- != (tidak sama dengan)
+- == (sama dengan)
+- >, <, >=, <= (perbandingan nilai)
+
+```
+print(a > b) # Output: True
+
+print(a == b) # Output: False
+
+print(a >= b) # Output: True
+
+print(a <= b) # Output: False
+```
+
+#### Operator Logika
+
+Operator logika ini digunakan untuk menggabungkan ekspresi yang dihasilkan dari Boolean sesuai dengan aturan yang telah ada.
 
 <p align="center">
-  <img src="https://github.com/rizaledc/Praktikum-Struktur-Data-Assigment-Modul-9/blob/main/Modul%209/output/Gambaran%20Rekursif%20Berjalan.png" alt="Alt Text">
+  <img src="https://github.com/rizaledc/IPSD-Assigment/blob/main/Modul%201/Assets/Operator%20Logika.png" alt="Alt Text">
 </p> 
 <p align="center">
- Gambar 1. Ilustrasi Fungsi Rekursif Berjalan
+ Gambar 2. Penggabungan Operator Logika
 </p> 
 
-Pada ilustrasi di atas, terdapat 5 kali print dimulai dari perulangan pertama hingga perulangan ke 5. Perulangan ini tentunya menggunakan sebuah parameter seperti n. Selain itu, terdapat dua jenis rekursif yang harus diketahui sebagai berikut:
+```
+x = True
+y = False
+print(x and y)
+print(x or y)
+```
 
-- Rekursif Langsung
-  Fungsi memanggil dirinya sendiri secara eksplisit atau secara langsung.
-- Rekursif Tidak Langsung
-  Fungsi yang memiliki serangkaian pemanggilan fungsi di dalamnya, tetapi tidak ada pemanggilan langsung ke fungsi itu sendiri.
+#### Fungsi
 
-Berikut contohnya:
+Dalam Python, fungsi (function) adalah blok kode yang terorganisir dan dapat digunakan kembali untuk melakukan tugas tertentu. Fungsi digunakan untuk membagi program menjadi bagian-bagian yang lebih kecil dan lebih terstruktur, sehingga memudahkan pemeliharaan dan penggunaan kembali kode. Fungsi dapat menerima input (disebut argumen), melakukan operasi tertentu, dan mengembalikan output (disebut return value).
 
-<p align="center">
-  <img src="https://github.com/rizaledc/Praktikum-Struktur-Data-Assigment-Modul-9/blob/main/Modul%209/output/Gambaran%20Rekursif%20Langsung%20dan%20Tidak.png" alt="Alt Text">
-</p> 
-<p align="center">
- Gambar 2. Gambaran Code Rekursi
-</p> 
+```
+# Definisi fungsi sederhana
+def greet(name):
+ return f"Hello, {name}!"
+# Memanggil fungsi
+print(greet("Rizal"))
+```
 
-Adapun kelebihan serta kekurangan dalam menggunakan kode rekursif sebagai berikut:
+#### Perulangan (Loops)
 
-  A. Kelebihan
-  1. Memberikan kemudahan dalam kode sehingga mudah dimengerti.
-  2. Sangat efektif untuk masalah yang dapat dibagi menjadi sub-bab sub-bab yang lebih kecil.
-  3. Tampilan kode yang lebih baik dan elegan.
-     
-  B. Kekurangan
-  
-  1. Rekursif menambah overhead pada call stack.
-  2. Implementasi kurang efisien dalam waktu seperti overhead pemanggilan fungsi.
-  3. Potensi overflow dan bug.
-     
-### B. Hash Table
+Perulangan atau loop dalam Python adalah struktur kontrol yang memungkinkan eksekusi berulang dari blok kode tertentu selama kondisi tertentu terpenuhi. Adapun dua jenis loop yang sering digunakan:
 
-Hash table merupakan bagian dari struktur data yang dapat digunakan untuk menyimpan nilai dengan kunci dengan efisiensi tinggi dalam pencarian, penyisipan, dan penghapusan data. Hash table biasanya terdiri dari dua komponen utama diantaranya array/vektor dan fungsi hash. Teknik hash disebut dengan hashing yang digunakan untuk mengubah rentang nilai kunci menjadi rentang indeks array.
+- For Loop --> digunakan dalam list, tuple, dictionary, dan range.
+```
+fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+ print(fruit)
+```
+- While Loop --> loop yang dilakukan untuk memenuhi kondisi tertentu.
+```
+counter = 0
+while counter < 3:
+ print(counter)
+ counter += 1
+```
+- List Comprehension --> menulis loop yang menghasilkan list.
+```
+numbers = [1, 2, 3, 4, 5]
+doubled = [x * 2 for x in numbers]
+print(doubled)
+```
 
-Dalam hash table terdapat bucket yang merupakan tempat array untuk menyimpan data dalam bentuk slot-slot. Dalam hashing dapat menghasilkan nilai unik dari setiap datanya yang dapat digunakan untuk indeks dalam array. Sehingga, hash table memungkinkan pencarian data dengan waktu konstan (O(1)) dalam kasus terbaik.
+#### Percabangan
 
-Sistem hash table bekerja dengan mengambil inputan kunci lalu memetakannya ke nilai indeks menggunakan fungsi hash. Data dapat disimpan pada posisi indeks array yang dihasilkan oleh fungsi hash. Fungsi hash mengambil kunci dan mengubahnya menjadi hash code, yaitu bilangan bulat yang kemudian digunakan sebagai indeks dalam array. Jika terjadi tabrakan (collision), di mana dua kunci memiliki indeks yang sama, hash table mengatasi ini dengan berbagai metode seperti chaining (menggunakan linked list untuk setiap indeks) atau open addressing (mencari indeks kosong berikutnya dalam array). Hash table banyak digunakan dalam implementasi struktur data seperti set dan map di berbagai bahasa pemrograman karena efisiensinya yang tinggi dalam menangani sejumlah besar data.
+Percabangan atau kondisional dalam Python adalah struktur kontrol yang memungkinkan program untuk membuat keputusan berdasarkan kondisi tertentu. Berdasarkan hasil evaluasi kondisi tersebut (benar atau salah), program akan mengeksekusi satu blok kode atau blok lainnya. Struktur percabangan utama dalam Python adalah if, elif, dan else.
 
-<p align="center">
-  <img src="https://github.com/rizaledc/Praktikum-Struktur-Data-Assigment-Modul-9/blob/main/Modul%209/output/Gambaran%20Hash%20Table.png" alt="Alt Text">
-</p> 
-<p align="center">
- Gambar 3. Gambaran Hash Table
-</p> 
+1. if: Memeriksa kondisi. Jika kondisi benar (True), maka blok kode di dalamnya akan dijalankan.
+2. elif: (singkatan dari "else if") Memeriksa kondisi lain jika kondisi sebelumnya salah. Ini digunakan untuk memeriksa beberapa kondisi.
+3. else: Menjalankan kode jika semua kondisi sebelumnya salah.
 
-Pada gambar di atas dapat kita pahami bahwa fungsi hash membuat pemetaan antara kunci dan nilai. Hasil dari hashing disebut sebagai nilai hash yang akan direpresentasikan dari string karakter asli tetapi biasanya lebih kecil dibandingkan dengan aslinya.
+```
+score = 85
+if score >= 90:
+ print("A")
+elif score >= 80:
+ print("B")
+else:
+ print("C")
+```
 
-Operasi pada hash table meliputi tiga operasi utama: penyisipan (insertion), pencarian (search), dan penghapusan (deletion). Berikut adalah penjelasan masing-masing operasi:
+Nested Conditionals (Percabangan bersarang atau percabangan dalam percabangan)
 
-1. Penyisipan (Insertion)
-   - Proses penyisipan dimulai dengan mengambil kunci dari pasangan kunci-nilai.
-   - Kunci tersebut kemudian diproses oleh fungsi hash untuk menghasilkan indeks dalam array.
-   - Jika slot pada indeks tersebut kosong, nilai disisipkan di sana.
-   - Jika slot sudah terisi (terjadi tabrakan), metode penanganan tabrakan seperti chaining (menggunakan linked list) atau open addressing (mencari slot kosong berikutnya) digunakan untuk menyimpan nilai tersebut.
+```
+score = 85
+attendance = 90
+if score >= 80:
+ if attendance >= 85:
+ print("Lulus dengan nilai baik")
+ else:
+ print("Kehadiran kurang")
+else:
+ print("Tidak lulus")
+```
 
-2. Pencarian (Search)
-   - Untuk mencari nilai berdasarkan kunci, fungsi hash digunakan untuk menghitung indeks dari kunci tersebut.
-   - Array diakses pada indeks yang dihasilkan. 
-   - Jika kunci yang diinginkan ada di slot tersebut, nilainya dikembalikan.
-   - Jika terjadi tabrakan, metode penanganan tabrakan digunakan untuk mencari kunci yang benar.
-   - Proses pencarian biasanya sangat cepat, dengan kompleksitas rata-rata O(1).
-
-3. Penghapusan (Deletion)
-   - Penghapusan dimulai dengan menghitung indeks dari kunci menggunakan fungsi hash.
-   - Indeks tersebut diakses dalam array.
-   - Jika kunci ditemukan pada indeks tersebut, nilai dihapus.
-   - Jika terjadi tabrakan, metode penanganan tabrakan digunakan untuk menemukan dan menghapus kunci yang benar.
-   - Setelah penghapusan, beberapa metode mungkin memerlukan penanganan tambahan untuk menjaga integritas struktur data.
-
-Secara umum, efisiensi hash table bergantung pada kualitas fungsi hash dan metode penanganan tabrakan yang digunakan. Idealnya, fungsi hash harus mendistribusikan kunci secara merata ke seluruh array untuk meminimalkan tabrakan dan mempertahankan performa yang optimal.
-
-Collision Resolution
-
-<p align="center">
-  <img src="https://github.com/rizaledc/Praktikum-Struktur-Data-Assigment-Modul-9/blob/main/Modul%209/output/Resolution.png" alt="Alt Text">
-</p> 
-<p align="center">
- Gambar 4. Collision Resolution Technique
-</p> 
-
-Collision merupakan keterbatasan hash table ketika dua angka dimasukkan ke dalam fungsi hash yang menghasilkan nilai yang sama. Cara menyelesaikannya sebagai berikut:
-
-1. Open Hashing (Chaining)
-
-Metode open hashing, juga dikenal sebagai separate chaining, adalah salah satu teknik penanganan tabrakan dalam hash table di mana setiap slot dalam array menyimpan daftar terhubung (linked list) dari semua elemen yang memiliki nilai hash yang sama. Ketika terjadi tabrakan, elemen baru ditambahkan ke akhir daftar terhubung di slot yang sesuai. Proses penyisipan, pencarian, dan penghapusan elemen dalam metode ini melibatkan penanganan daftar terhubung tersebut [4]. Penyisipan dilakukan dengan menambahkan elemen baru ke dalam daftar, pencarian dilakukan dengan menelusuri daftar untuk menemukan elemen dengan kunci yang diinginkan, dan penghapusan dilakukan dengan menghapus elemen dari daftar. Metode open hashing mengelola tabrakan dengan cara yang efisien, karena daftar terhubung memungkinkan penambahan elemen baru tanpa memerlukan pencarian slot kosong berikutnya dalam array. Selain itu, metode ini juga menghindari masalah clustering yang sering terjadi pada metode open addressing, sehingga performa hash table dapat tetap stabil meskipun beban (load factor) tinggi. Namun, performa metode ini juga bergantung pada panjang rata-rata dari daftar terhubung; semakin panjang daftar, semakin tinggi kompleksitas operasinya.
-
-2. Closed Hashing
-
-Closed hashing, juga dikenal sebagai open addressing, adalah metode penanganan tabrakan dalam hash table yang tidak menggunakan struktur data tambahan seperti linked list. Sebaliknya, elemen-elemen yang bertabrakan ditempatkan langsung di slot lain dalam array berdasarkan aturan tertentu. Berikut adalah beberapa penjabaran mengenai closed hashing:
-
-1. Linear Probing
-   - Jika terjadi tabrakan, elemen baru ditempatkan di slot berikutnya yang kosong dalam array.
-   - Pencarian dan penghapusan juga mengikuti pola yang sama: mulai dari slot yang dihitung oleh fungsi hash, kemudian memeriksa slot berikutnya satu per satu hingga elemen ditemukan atau slot kosong terdeteksi.
-   - Kelebihan dari linear probing adalah kesederhanaannya, namun dapat menyebabkan clustering, yaitu ketika elemen-elemen bertumpuk dalam satu area array, sehingga mengurangi efisiensi pencarian.
-
-2. Quadratic Probing
-   - Untuk mengurangi clustering yang terjadi pada linear probing, quadratic probing menggunakan kuadrat dari indeks pergeseran untuk menentukan slot berikutnya (misalnya, \(i^2\) untuk iterasi ke-i).
-   - Dengan demikian, jika terjadi tabrakan, elemen baru ditempatkan pada slot berikutnya yang dihitung sebagai \((hash + i^2) \% ukuran\_array\).
-   - Quadratic probing mengurangi clustering primer, tetapi masih bisa mengalami clustering sekunder dan memerlukan lebih banyak perhitungan dibandingkan linear probing.
-
-3. Double Hashing
-   - Double hashing menggunakan dua fungsi hash berbeda untuk menentukan posisi slot berikutnya saat terjadi tabrakan.
-   - Jika slot yang dihitung oleh fungsi hash pertama sudah terisi, fungsi hash kedua digunakan untuk menentukan langkah pergeseran berikutnya.
-   - Sebagai contoh, jika terjadi tabrakan, elemen baru ditempatkan pada slot yang dihitung sebagai \((hash1 + i * hash2) \% ukuran\_array\).
-   - Double hashing cenderung lebih kompleks namun memberikan distribusi yang lebih baik dan mengurangi masalah clustering yang ada pada linear dan quadratic probing.
+Sebagai bahasa pemrograman yang telah berkembang selama lebih dari tiga dekade, Python telah berhasil menjadi salah satu bahasa yang paling populer di dunia teknologi. Kelebihannya yang mencakup sintaks yang sederhana, kemampuan lintas platform, serta ekosistem pustaka yang luas menjadikannya pilihan utama bagi pemula maupun profesional. Mulai dari data science, kecerdasan buatan, hingga pengembangan web dan otomasi sistem, Python menawarkan fleksibilitas dan kekuatan untuk berbagai jenis aplikasi. Dengan komunitas yang terus berkembang dan inovasi yang terus diperkenalkan, Python akan tetap menjadi pilar penting dalam dunia pemrograman modern di masa depan.
 
 ### 1. Guided 1
 
-```C++
-#include<iostream>
-using namespace std;
+Terdapat sekitar 100 guided yang telah diberikan. Dalam guided ini, saya akan memilih beberapa guided.
 
-// Code ini berfungsi untuk melakukan hitung mundur
-// dari angka yang diinputkan
-void countdown(int n) {
-    if (n == 0) {
-        return; // Hanya perlu 'return;' karena fungsi ini bertipe void
-    }
-    cout << n << " "; // Menambahkan spasi untuk pemisah antar angka
-    countdown(n - 1);
-}
+Code:
+```
+def factorial(n):
+    result = 1
+    for i in range(1, n + 1):
+        result *= i
+    return result
 
-int main() {
-    cout << "Rekursif Langsung: ";
-    countdown(5); // 5 merupakan inputnya
-    cout << endl;
-    return 0;
-}
+print(factorial(5))
 ```
 
-**Penjelasan:**
-
-#### Bagian 1
-
-```C++
-#include<iostream>
-using namespace std;
+Output:
 ```
-- #include<iostream>: Mengimpor library standar input-output di C++ yang digunakan untuk operasi input dan output.
-- using namespace std;: Memungkinkan kita menggunakan elemen-elemen dalam namespace std (standard) tanpa perlu menuliskan std:: sebelum setiap fungsi atau objek yang berasal dari library standar.
-
-#### Bagian 2
-
-```C++
-void countdown(int n) {
-    if (n == 0) {
-        return; // Hanya perlu 'return;' karena fungsi ini bertipe void
-    }
-    cout << n << " "; // Menambahkan spasi untuk pemisah antar angka
-    countdown(n - 1);
-}
-```
-- Fungsi countdown adalah fungsi rekursif yang bertipe void (tidak mengembalikan nilai).
-Parameter n adalah angka yang akan dihitung mundur.
-- if (n == 0): Basis rekursi, jika n sama dengan 0, fungsi akan berhenti memanggil dirinya sendiri.
-- cout << n << " ";: Menampilkan nilai n diikuti dengan spasi sebagai pemisah.
-- countdown(n - 1);: Memanggil fungsi countdown lagi dengan nilai n dikurangi 1, ini adalah langkah rekursif yang mengurangi nilai n setiap kali fungsi dipanggil.
-
-#### Bagian 3
-
-```C++
-int main() {
-    cout << "Rekursif Langsung: ";
-    countdown(5); // 5 merupakan inputnya
-    cout << endl;
-    return 0;
-}
+120
 ```
 
-Fungsi main atau fungsi utama ini merupakan fungsi yang pertama kali akan dieksekusi dalam program. Pada main terdapat berbagai fungsi yang telah dibuat sebelumnya sehingga pada main hanya tinggal mengatur saja posisi fungsi yang telah di buat.
-
-- cout << "Rekursif Langsung: ";: Menampilkan teks "Rekursif Langsung: " di layar.
-- countdown(5);: Memanggil fungsi countdown dengan nilai awal 5.
-- cout << endl;: Menambahkan baris baru setelah semua angka ditampilkan.
-- return 0;: Mengakhiri fungsi main dengan mengembalikan nilai 0, yang menandakan bahwa program berakhir tanpa error.
-
-#### Full Code Screenshot
-
-<p align="center">
-  <img src="https://github.com/rizaledc/Praktikum-Struktur-Data-Assigment-Modul-9/blob/main/Modul%209/output/CodeGuid1.png" alt="Alt Text">
-</p>
-
-#### Screenshot Output
-
-<p align="center">
-  <img src="https://github.com/rizaledc/Praktikum-Struktur-Data-Assigment-Modul-9/blob/main/Modul%209/output/OUTGUIDED1.png" alt="Alt Text">
-</p>
-
-#### Penjelasan
-
-Output dari program diatas akan menampilkan output "Rekursif Langsung: 5 4 3 2 1" yang merupakan hasil dari hitung mundur dari 5 hingga 1 menggunakan pendekatan rekursif.
+Pada kode di atas, praktikan mendefinisikan sebuah fungsi yaitu fungsi untuk mencari faktorial dengan parameter n. Kode di atas menggunakan looping for dengan iterasi n+1. Diakhir, praktikan memasukkan parameter 5 untuk mengetahui hasil dari 5 faktorial yaitu 120.
 
 ### 2. Guided 2
 
-```C++
-#include<iostream>
-using namespace std;
+Terdapat sekitar 100 guided yang telah diberikan. Dalam guided ini, saya akan memilih beberapa guided.
 
-void functionB(int n); // Deklarasi fungsi functionB
-
-void functionA(int n) {
-    if (n > 0) {
-        cout << n << " ";
-        functionB(n - 1); // Panggilan rekursif tidak langsung
-    }
-}
-
-void functionB(int n) {
-    if (n > 0) {
-        cout << n << " ";
-        functionA(n / 2); // Panggilan rekursif tidak langsung
-    }
-}
-
-int main() { // Memperbaiki penulisan 'int main'
-    int num = 5; // Memperbaiki penulisan 'int num = 5'
-    cout << "Rekursif Tidak Langsung: "; // Memperbaiki penulisan string
-    functionA(num);
-    return 0; // Memperbaiki penulisan 'return 0'
-}
+Code:
+```
+name = input("Enter your name: ")
+age = int(input("Enter your age: "))
+print(f"Name: {name}, Age: {age}")
 ```
 
-**Penjelasan:**
-
-#### Bagian 1
-
-```C++
-#include<iostream>
-using namespace std;
+Output:
 ```
-- #include<iostream>: Mengimpor library standar input-output di C++ yang digunakan untuk operasi input dan output.
-- using namespace std;: Memungkinkan kita menggunakan elemen-elemen dalam namespace std (standard) tanpa perlu menuliskan std:: sebelum setiap fungsi atau objek yang berasal dari library standar.
-
-#### Bagian 2
-
-```C++
-   void functionB(int n); // Deklarasi fungsi functionB
-
-   void functionA(int n) {
-       if (n > 0) {
-           cout << n << " ";
-           functionB(n - 1); // Panggilan rekursif tidak langsung
-       }
-   }
-   void functionB(int n) {
-       if (n > 0) {
-           cout << n << " ";
-           functionA(n / 2); // Panggilan rekursif tidak langsung
-       }
-   }
-```
-- Fungsi functionB dideklarasikan sebelum functionA untuk memastikan bahwa ketika functionA memanggil functionB, kompiler sudah mengetahui tentang keberadaan functionB.
-- Fungsi ini mencetak nilai n dan kemudian memanggil functionB dengan nilai n - 1. Ini terus terjadi secara rekursif selama n lebih besar dari 0.
-- Mirip dengan functionA, fungsi ini mencetak nilai n dan memanggil functionA dengan nilai n / 2. Proses ini berlanjut secara rekursif selama n lebih besar dari 0.
-
-#### Bagian 3
-
-```C++
-   int main() {
-       int num = 5;
-       cout << "Rekursif Tidak Langsung: ";
-       functionA(num);
-       return 0;
-   }
+Enter your name: Rizal
+Enter your age: 19
+Name: Rizal, Age: 19
 ```
 
-Fungsi main atau fungsi utama ini merupakan fungsi yang pertama kali akan dieksekusi dalam program. Pada main terdapat berbagai fungsi yang telah dibuat sebelumnya sehingga pada main hanya tinggal mengatur saja posisi fungsi yang telah di buat.
+Pada kode di atas, praktikan membuat 3 variabel yaitu name yang akan menerima input nama dan age yang menerima input umur. Terakhir praktikan menggunakan print untuk memunculkan output ke layar. Pada kode di atas, diinputkan nama Rizal pada variabel name, diinputkan angka 19 pada variabel age. Maka outputnya seperti Name: Rizal, Age: 19.
 
-- Variabel num diinisiasi dengan 5.
-- Program mencetak string "Rekursif Tidak Langsung: " sebagai pengantar output dari fungsi rekursif.
-- functionA dipanggil dengan nilai awal num (5), memulai proses rekursi.
-- return 0; menandakan bahwa program berakhir dengan sukses.
-
-#### Full Code Screenshot
+#### Full Code and Output Screenshot 
 
 <p align="center">
-  <img src="https://github.com/rizaledc/Praktikum-Struktur-Data-Assigment-Modul-9/blob/main/Modul%209/output/CodeGuid2.png" alt="Alt Text">
+  <img src="https://github.com/rizaledc/IPSD-Assigment/blob/main/Modul%201/Assets/Out2.png" alt="Alt Text">
 </p>
-
-#### Screenshot Output
-
-<p align="center">
-  <img src="https://github.com/rizaledc/Praktikum-Struktur-Data-Assigment-Modul-9/blob/main/Modul%209/output/OUTGUIDED2.png" alt="Alt Text">
-</p>
-
-#### Penjelasan
-
-Output dari program diatas mengilustrasikan bagaimana dua fungsi dapat saling memanggil satu sama lain dalam pola rekursi tidak langsung, mencetak serangkaian nilai berdasarkan pemanggilan rekursif tersebut. Menampilkan output rekursif tidak langsung dengan nilai 5 4 2 1.
 
 ### 3. Guided 3
 
-```C++
-#include <iostream>
-#include <string>
-#include <vector>
-using namespace std;
+Terdapat sekitar 100 guided yang telah diberikan. Dalam guided ini, saya akan memilih beberapa guided.
 
-const int TABLE_SIZE = 11; // Ukuran tabel hash
-
-// Kelas untuk menyimpan node hash
-class HashNode {
-public:
-    string name; // Nama kunci
-    string phone_number; // Nomor telepon sebagai nilai
-
-    // Konstruktor untuk inisialisasi nama dan nomor telepon
-    HashNode(string name, string phone_number) {
-        this->name = name;
-        this->phone_number = phone_number;
-    }
-};
-
-// Kelas untuk struktur data hash map
-class HashMap {
-private:
-    vector<HashNode*> table[TABLE_SIZE]; // Array dari vektor untuk tabel hash
-
-public:
-    // Fungsi hash untuk menghitung nilai hash dari kunci
-    int hashFunc(string key) {
-        int hash_val = 0;
-        for (char c : key) {
-            hash_val += c; // Menambahkan nilai ASCII dari setiap karakter
-        }
-        return hash_val % TABLE_SIZE; // Menggunakan modulo untuk mendapatkan indeks
-    }
-
-    // Fungsi untuk memasukkan pasangan kunci-nilai ke dalam hash map
-    void insert(string name, string phone_number) {
-        int hash_val = hashFunc(name); // Menghitung hash dari nama
-        for (auto node : table[hash_val]) {
-            if (node->name == name) {
-                node->phone_number = phone_number; // Update nomor telepon jika nama sudah ada
-                return;
-            }
-        }
-        table[hash_val].push_back(new HashNode(name, phone_number)); // Menambahkan node baru jika nama belum ada
-    }
-
-    // Fungsi untuk menghapus node berdasarkan nama
-    void remove(string name) {
-        int hash_val = hashFunc(name); // Menghitung hash dari nama
-        for (auto it = table[hash_val].begin(); it != table[hash_val].end(); it++) {
-            if ((*it)->name == name) {
-                table[hash_val].erase(it); // Menghapus node
-                return;
-            }
-        }
-    }
-
-    // Fungsi untuk mencari nomor telepon berdasarkan nama
-    string searchByName(string name) {
-        int hash_val = hashFunc(name); // Menghitung hash dari nama
-        for (auto node : table[hash_val]) {
-            if (node->name == name) {
-                return node->phone_number; // Mengembalikan nomor telepon jika ditemukan
-            }
-        }
-        return ""; // Mengembalikan string kosong jika tidak ditemukan
-    }
-
-    // Fungsi untuk mencetak semua isi hash table
-    void print() {
-        for (int i = 0; i < TABLE_SIZE; i++) {
-            cout << i << ": ";
-            for (auto pair : table[i]) {
-                if (pair != nullptr) {
-                    cout << "[" << pair->name << ", " << pair->phone_number << "]"; // Mencetak nama dan nomor telepon
-                }
-            }
-            cout << endl;
-        }
-    }
-};
-
-// Fungsi utama
-int main() {
-    HashMap employee_map;
-    employee_map.insert("Mistah", "1234"); // Memasukkan data
-    employee_map.insert("Pastah", "5678");
-    employee_map.insert("Ghana", "91011");
-
-    // Mencetak nomor telepon berdasarkan nama
-    cout << "Nomer Hp Mistah : " << employee_map.searchByName("Mistah") << endl;
-    cout << "Phone Hp Pastah : " << employee_map.searchByName("Pastah") << endl;
-    cout << "Phone Hp Ghana : " << employee_map.searchByName("Ghana") << endl;
-
-    employee_map.remove("Mistah"); // Menghapus data
-    cout << "Nomer Hp Mistah setelah dihapus : " << employee_map.searchByName("Mistah") << endl << endl;
-
-    cout << "Hash Table : " << endl;
-    employee_map.print(); // Mencetak seluruh hash table
-
-    return 0;
-}
+Code:
+```
+from functools import reduce
+numbers = [1, 2, 3, 4, 5]
+total = reduce(lambda x, y: x + y, numbers)
+print(total)
 ```
 
-**Penjelasan:**
-
-#### Bagian 1
-
-```C++
-#include <iostream>
-#include <string>
-#include <vector>
-using namespace std;
+Output:
 ```
-- #include<iostream>: Mengimpor library standar input-output di C++ yang digunakan untuk operasi input dan output.
-- #include<string>: digunakan untuk mengedit serta memanipulasi string di dalam kode.
-- #include<vector>: dapat digunakan untuk memberikan arah dalam kode sebagai vektor.
-- using namespace std;: Memungkinkan kita menggunakan elemen-elemen dalam namespace std (standard) tanpa perlu menuliskan std:: sebelum setiap fungsi atau objek yang berasal dari library standar.
-
-#### Bagian 2
-
-```C++
-const int TABLE_SIZE = 11; // Ukuran tabel hash
-class HashNode {
-public:
-    string name; // Nama kunci
-    string phone_number; // Nomor telepon sebagai nilai
-
-    HashNode(string name, string phone_number) {
-        this->name = name;
-        this->phone_number = phone_number;
-    }
-};
-```
-- Mendefinisikan ukuran tabel hash yang akan digunakan dalam hash map. Deklarasi konstanta TABLE_SIZE = 11.
-- Kelas ini menyimpan data dalam bentuk pasangan kunci (name) dan nilai (phone_number).
-- Konstruktor menginisialisasi objek dengan nama dan nomor telepon yang diberikan.
-
-#### Bagian 3
-
-```C++
-class HashMap {
-private:
-    vector<HashNode*> table[TABLE_SIZE]; // Array dari vektor untuk tabel hash
-  int hashFunc(string key) {
-      int hash_val = 0;
-      for (char c : key) {
-          hash_val += c;
-      }
-      return hash_val % TABLE_SIZE;
-  }
+15
 ```
 
-Menghitung nilai hash dari kunci yang diberikan dengan menjumlahkan nilai ASCII dari setiap karakter, kemudian di modulo dengan TABLE_SIZE
+Pada kode di atas, terdapat modul functools yang dipanggil untuk menjumlahkan semua elemen dalam list numbers. Reduce merupakan fungsi yang melakukan operasi secara berulang pada elemen dari sebuah list. Dibuatkan list numbers yang berisi 1, 2, 3, 4, 5 lalu terdapat variabel total yang akan mereduce seluruh angka pada list numbers. Ketika dicetak pada layar menggunakan fungsi print() maka akan muncul output 15.
 
-#### Bagian 4
-
-```C++
-  void insert(string name, string phone_number) {
-      int hash_val = hashFunc(name);
-      for (auto node : table[hash_val]) {
-          if (node->name == name) {
-              node->phone_number = phone_number;
-              return;
-          }
-      }
-      table[hash_val].push_back(new HashNode(name, phone_number));
-  }
-```
-
-Menambahkan pasangan kunci-nilai ke dalam hash map. Jika kunci sudah ada, nilai akan diperbarui.
-
-#### Bagian 5
-
-```C++
-  void remove(string name) {
-      int hash_val = hashFunc(name);
-      for (auto it = table[hash_val].begin(); it != table[hash_val].end(); it++) {
-          if ((*it)->name == name) {
-              table[hash_val].erase(it);
-              return;
-          }
-      }
-  }
-```
-
-Menghapus node berdasarkan namanya.
-
-#### Bagian 6
-
-```C++
-  string searchByName(string name) {
-      int hash_val = hashFunc(name);
-      for (auto node : table[hash_val]) {
-          if (node->name == name) {
-              return node->phone_number;
-          }
-      }
-      return "";
-  }
-```
-
-Mencari nomor telepon berdasarkan nama. Mengembalikan nomor telepon jika ditemukan, atau string kosong jika tidak.
-
-#### Bagian 7
-
-```C++
-  void print() {
-      for (int i = 0; i < TABLE_SIZE; i++) {
-          cout << i << ": ";
-          for (auto pair : table[i]) {
-              if (pair != nullptr) {
-                  cout << "[" << pair->name << ", " << pair->phone_number << "]";
-              }
-          }
-          cout << endl;
-      }
-  }
-```
-
-Digunakan untuk memunculkan (mengeprint) hasil dari hash table.
-
-#### Bagian 8
-
-```C++
-int main() {
-    HashMap employee_map;
-    employee_map.insert("Mistah", "1234");
-    employee_map.insert("Pastah", "5678");
-    employee_map.insert("Ghana", "91011");
-
-    cout << "Nomer Hp Mistah : " << employee_map.searchByName("Mistah") << endl;
-    employee_map.remove("Mistah");
-    cout << "Nomer Hp Mistah setelah dihapus : " << employee_map.searchByName("Mistah") << endl;
-
-    employee_map.print();
-    return 0;
-}
-```
-
-Fungsi main atau fungsi utama ini merupakan fungsi yang pertama kali akan dieksekusi dalam program. Pada main terdapat berbagai fungsi yang telah dibuat sebelumnya sehingga pada main hanya tinggal mengatur saja posisi fungsi yang telah di buat. Membuat objek HashMap, memasukkan beberapa data, mencetak, menghapus, dan mencetak ulang untuk menunjukkan fungsi dari hash map.
-
-#### Full Code Screenshot
+#### Full Code and Output Screenshot 
 
 <p align="center">
-  <img src="https://github.com/rizaledc/Praktikum-Struktur-Data-Assigment-Modul-9/blob/main/Modul%209/output/CodeGuid3.png" alt="Alt Text">
+  <img src="https://github.com/rizaledc/IPSD-Assigment/blob/main/Modul%201/Assets/Out3.png" alt="Alt Text">
 </p>
 
-#### Screenshot Output
+### 4. Guided 4
+
+Terdapat sekitar 100 guided yang telah diberikan. Dalam guided ini, saya akan memilih beberapa guided.
+
+Code:
+```
+class Person:
+    def __init__(self, name):
+        self.name = name
+
+class Mahasiswa(Person):
+    def __init__(self, name, umur):
+        super().__init__(name)
+        self.umur = umur
+
+mahasiswa = Mahasiswa("Alice", 20)
+print(mahasiswa.name, mahasiswa.umur))
+```
+
+Output:
+```
+Alice 20
+```
+
+Pada kode di atas, dibuatkan dua class yaitu class Person yang menerima satu parameter yaitu name sebagai atribut dari objek yang dibuat dari class Person. Lalu terdapat class Mahasiswa dengan parameter Person, dengan metode __init__ yang menerima dua parameter name dan umur. Dengan menggunakan super().__init__(name), konstruktor dari kelas Person dipanggil, yang artinya name diberikan kepada konstruktor Person untuk disimpan sebagai self.name. Berikutnya, membuat variabel Mahasiswa yang berisikan data string "Alice", integer 20. Terakhir, menggunakan fungsi print() yang digunakan untuk memunculkan output sehingga outputnya adalah Alice, 20.
+
+#### Full Code and Output Screenshot 
 
 <p align="center">
-  <img src="https://github.com/rizaledc/Praktikum-Struktur-Data-Assigment-Modul-9/blob/main/Modul%209/output/OUTGUIDED3.png" alt="Alt Text">
+  <img src="https://github.com/rizaledc/IPSD-Assigment/blob/main/Modul%201/Assets/Out4.png" alt="Alt Text">
 </p>
 
-#### Penjelasan
-
-Output dari program diatas pertamanya memasukkan nomor Mistah, Pastah, dan Ghana. Berikutnya nomor di cetak --> Menghapus nomor Mistah --> Mencetak nomor Mistah setelah di hapus --> Mencetak seluruh isi Hash Table.
 
 ## Unguided
 
 ### 1. Unguided 1
 
-####  Buatlah sebuah program Rekursif Langsung (Direct Recursion) yang menghitung nilai faktorial dari sebuah inputan bilangan bulat positif.
+####  Buatlah program yang dapat menghasilkan pola berbentuk angka seperti di bawah ini, dengan syarat angka yang ditampilkan adalah hasil dari penjumlahan bilangan prima sebelumnya:
+
+1
+
+2 3
+
+5 7 11
+
+13 17 19 23
 
 **Kode Program:**
 
-```C++
-#include <iostream>
+```
+# Soal 1
+# Fungsi untuk memeriksa apakah sebuah bilangan adalah bilangan prima
+def prime(num):
+    # Jika num kurang dari 2, itu bukan bilangan prima
+    if num < 2:
+        return False
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
 
-// Fungsi untuk menghitung faktorial menggunakan rekursi langsung
-long long faktorial(int n) {
-    if 
-        (n == 0 || n== 1) 
-        return 1;
-    else // basis rekursi
-        return n * faktorial(n - 1); // rekursi
-}
+# Fungsi untuk membuat daftar bilangan prima dengan panjang n
+# Fungsi ini menginisialisasi list dengan 1 dan mengisi bilangan prima hingga jumlah n tercapai.
+def make_prime(n):
+    prime_list = [1]  # Inisialisasi daftar dengan elemen pertama 1
+    num = 2 
+    while len(prime_list) < n:
+        # Jika num adalah bilangan prima, tambahkan ke prime_list
+        if prime(num):
+            prime_list.append(num)
+        num += 1  # Cek angka berikutnya
+    return prime_list  # Kembalikan daftar bilangan prima
 
-int main() {
-    int angka;
-    std::cout << "Masukkan bilangan bulat positif: ";
-    std::cin >> angka;
+# Fungsi untuk mencetak pola piramida bilangan prima
+# Fungsi ini menghitung jumlah bilangan yang dibutuhkan untuk membentuk pola piramida 
+# berdasarkan jumlah baris yang diminta dan mencetak bilangan prima sesuai pola.
+def pattern(rows):
+    prime_count = sum(range(1, rows + 1))  # Jumlah bilangan yang dibutuhkan
+    primes = make_prime(prime_count)  # Buat daftar bilangan prima yang sesuai
 
-    // Memastikan bahwa angka adalah positif
-    if (angka < 0) {
-        std::cout << "Faktorial tidak didefinisikan untuk bilangan negatif." << std::endl;
-    } else {
-        long long hasil = faktorial(angka);
-        std::cout << "Hasil Faktorial dari " << angka << " adalah: " << hasil << std::endl;
-    }
+    index = 0 
+    for i in range(1, rows + 1):
+        for j in range(i):
+            print(primes[index], end=' ') 
+            index += 1
+        print()
 
-    return 0;
-}
+# Menentukan jumlah baris untuk pola
+rows = 4
+# Memanggil fungsi untuk mencetak pola bilangan prima
+pattern(rows)
 ```
 
 **Penjelasan:**
 
 #### Bagian 1
 
-```C++
-#include <iostream>
+```
+def prime(num):
+    if num < 2:
+        return False  # Bilangan prima tidak ada yang lebih kecil dari 2
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
 ```
 
-Library iostream digunakan untuk menjalankan operasi input dan output pada program. Memungkinkan penggunaan fungsi std::cout dan std::cin.
+Fungsi ini memeriksa apakah suatu angka (num) merupakan bilangan prima. if num < 2: Mengembalikan False jika num lebih kecil dari 2 karena bilangan prima dimulai dari 2. for i in range(2, int(num ** 0.5) + 1): Memeriksa faktor pembagi angka num dari 2 hingga akar kuadrat dari num. if num % i == 0: Jika num dapat dibagi habis oleh i, maka bukan bilangan prima, sehingga mengembalikan False. Jika num lolos dari semua pengecekan, fungsi ini mengembalikan True, menandakan bahwa num adalah bilangan prima.
 
 #### Bagian 2
 
-```C++
-   long long faktorial(int n) {
-       if (n == 0 || n == 1) 
-           return 1;
-       else
-           return n * faktorial(n - 1);
-   }
+```
+def make_prime(n):
+    prime_list = [1]
+    num = 2
+    while len(prime_list) < n:
+        if prime(num):
+            prime_list.append(num)
+        num += 1
+    return prime_list
 ```
 
-- Fungsi faktorial menerima satu parameter n (bilangan bulat).
-- Fungsi ini menggunakan rekursi untuk menghitung faktorial.
-- Basis rekursinya adalah jika n sama dengan 0 atau 1, maka faktorialnya adalah 1.
-- Jika tidak, fungsi akan memanggil dirinya sendiri dengan argumen n - 1 dan mengalikan hasilnya dengan n.
+- Fungsi ini menghasilkan list bilangan prima berisi n bilangan, termasuk angka 1. prime_list = [1]: Membuat list awal yang dimulai dengan 1.
+- while len(prime_list) < n: Loop berjalan hingga jumlah bilangan dalam prime_list mencapai n. if prime(num): Memeriksa apakah num adalah bilangan prima menggunakan fungsi prime(num). Jika benar, num ditambahkan ke dalam prime_list.
+- num += 1: Setiap kali loop dijalankan, num bertambah satu untuk memeriksa angka berikutnya.
+- Fungsi ini mengembalikan list prime_list yang berisi n bilangan prima.
   
 #### Bagian 3
 
-```C++
-   int main() {
-       int angka;
-       std::cout << "Masukkan bilangan bulat positif: ";
-       std::cin >> angka;
-
-       if (angka < 0) {
-           std::cout << "Faktorial tidak didefinisikan untuk bilangan negatif." << std::endl;
-       } else {
-           long long hasil = faktorial(angka);
-           std::cout << "Hasil Faktorial dari " << angka << " adalah: " << hasil << std::endl;
-       }
-
-       return 0;
-   }
+```
+def pattern(rows):
+    prime_count = sum(range(1, rows + 1))  # Menjumlahkan bilangan prima
+    primes = make_prime(prime_count)
+    
+    index = 0
+    for i in range(1, rows + 1):
+        for j in range(i):
+            print(primes[index], end=' ')
+            index += 1
+        print()
 ```
 
-Fungsi di atas merupakan fungsi main yang berupa fungsi utama di dalam program yang disebut dengan fungsi main. Fungsi main yang pertama di eksekusi dan memengaruhi tampilan output.
+Fungsi ini mencetak pola piramida dengan bilangan prima.
+- prime_count = sum(range(1, rows + 1)): Menghitung jumlah bilangan yang perlu dicetak berdasarkan jumlah baris (rows). Ini dilakukan dengan menjumlahkan angka-angka dari 1 hingga rows (misalnya, untuk rows = 4, jumlahnya adalah 1 + 2 + 3 + 4 = 10). Angka ini menyatakan jumlah bilangan prima yang diperlukan.
+- primes = make_prime(prime_count): Memanggil fungsi make_prime(prime_count) untuk menghasilkan list bilangan prima sebanyak prime_count. index = 0: Variabel ini digunakan untuk melacak indeks bilangan prima yang akan dicetak.
+- Loop pertama for i in range(1, rows + 1): Loop ini menentukan jumlah baris yang akan dicetak. Loop kedua for j in range(i): Loop ini mencetak bilangan prima sebanyak nilai dari i, sehingga pada baris pertama mencetak 1 bilangan, baris kedua mencetak 2 bilangan, dan seterusnya.
+- print(primes[index], end=' '): Mencetak bilangan prima dari list primes pada baris tersebut, tanpa berpindah ke baris baru.
+- index += 1: Menggeser indeks untuk mengambil bilangan prima berikutnya.
+- print(): Berpindah ke baris baru setelah setiap baris pola selesai dicetak.
 
-- Pengguna diminta untuk memasukkan bilangan bulat positif.
-- Jika bilangan yang dimasukkan negatif, program akan memberikan pesan bahwa faktorial tidak didefinisikan untuk bilangan negatif.
-- Jika bilangan positif, fungsi faktorial dipanggil dengan bilangan tersebut sebagai argumen, dan hasilnya ditampilkan.
-- Fungsi main mengembalikan 0, menandakan bahwa program berakhir tanpa error.
+#### Bagian 4
+
+```
+rows = 4
+pattern(rows)
+```
+
+Pada bagian ini, fungsi pattern(rows) dipanggil dengan argumen rows = 4, sehingga pola akan dicetak dalam 4 baris.
 
 #### Full code Screenshot:
 
 <p align="center">
-  <img src="https://github.com/rizaledc/Praktikum-Struktur-Data-Assigment-Modul-9/blob/main/Modul%209/output/CodeUn1.png" alt="Alt Text">
+  <img src="https://github.com/rizaledc/IPSD-Assigment/blob/main/Modul%201/Assets/Output1.png" alt="Alt Text">
 </p>
 
 #### Screenshot Output
 
 <p align="center">
-  <img src="https://github.com/rizaledc/Praktikum-Struktur-Data-Assigment-Modul-9/blob/main/Modul%209/output/OutUn1.png" alt="Alt Text">
-</p>
+  <img src="https://github.com/rizaledc/IPSD-Assigment/blob/main/Modul%201/Assets/Output1.png" alt="Alt Text">
+</p> 
+<p align="center">
+ Screenshot Output Unguided 1
+</p> 
 
 #### Penjelasan
 
-Output kode di atas sudah di atur juga dalam fungsi main dimana alurnya sebagai berikut: Pengguna diminta memasukkan bilangan bulat positif --> Jika pengguna memasukkan bilangan negatif maka akan keluar pesan tidak dapat didefinisikan --> Jika bilangan yang dimasukkan benar maka akan di eksekusi kodenya --> Hasil di print sebagai output. Jika memasukkan angka 7 maka faktorialnya adalah 5040.
+Baris pertama mencetak 1 bilangan prima.
+Baris kedua mencetak 2 bilangan prima.
+Baris ketiga mencetak 3 bilangan prima, dan seterusnya, sesuai dengan jumlah baris yang ditentukan (rows).
 
 ### 2. Unguided 2
 
