@@ -12,8 +12,6 @@
 
 ## Dasar Teori
 
-### A. Python
-
 ### Sejarah Python dan Perkembangannya Hingga Python Versi 3
 
 Python pertama kali dikembangkan oleh **Guido van Rossum** pada akhir tahun 1980-an di **Centrum Wiskunde & Informatica (CWI)** di Belanda dan resmi dirilis pada tahun 1991 . Tujuan utama Python adalah menciptakan bahasa yang sederhana, mudah dipahami, namun tetap kuat dalam hal kemampuan. **Python 1.0** menekankan pada kekonsistenan sintaks yang bersih dan readable, serta menghadirkan fitur-fitur dasar seperti pengelolaan modul, kelas, dan tipe data dinamis [1].
