@@ -222,6 +222,9 @@ Pada kode di atas, dibuatkan dua class yaitu class Person yang menerima satu par
 
 ## Unguided
 
+**Data yang digunakan**
+[Kunjungi OpenAI](https://www.openai.com)
+
 ### Soal 1
 
 ####   Load data (movie classification)
