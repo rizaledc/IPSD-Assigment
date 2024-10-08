@@ -6,212 +6,113 @@
 
 ## Dasar Teori
 
-<p align="center">
-  <img src="https://github.com/rizaledc/IPSD-Assigment/blob/main/Modul%201/Assets/Gambar1.jpeg" alt="Alt Text">
-</p> 
-<p align="center">
- Gambar 1. Ilustrasi Programer Python
-</p> 
+### Pengolahan Data dengan Python
 
-### Sejarah Python dan Perkembangannya Hingga Python Versi 3
-
-Python pertama kali dikembangkan oleh Guido van Rossum pada akhir tahun 1980-an di Centrum Wiskunde & Informatica (CWI) di Belanda dan resmi dirilis pada tahun 1991 . Tujuan utama Python adalah menciptakan bahasa yang sederhana, mudah dipahami, namun tetap kuat dalam hal kemampuan. Python 1.0 menekankan pada kekonsistenan sintaks yang bersih dan readable, serta menghadirkan fitur-fitur dasar seperti pengelolaan modul, kelas, dan tipe data dinamis [1].
-
-Perkembangan Python semakin pesat dengan dirilisnya Python 2.0 pada tahun 2000. Salah satu fitur kunci dari Python 2 adalah garbage collection berbasis cycle-detecting, yang membuat pengelolaan memori lebih efisien. Selain itu, Python 2.0 juga memperkenalkan fitur list comprehensions dan augmented assignment, yang menjadikan penulisan kode lebih singkat dan efisien [2]. Namun, Python 2 memiliki keterbatasan, khususnya dalam dukungan internasionalisasi dan pengelolaan tipe data string. Ini mendorong pengembangan Python 3, yang dirilis pada tahun 2008  .
-
-Python 3.0 membawa perubahan mendasar pada arsitektur bahasa ini, yang menyebabkan kompatibilitas ke belakang (backward compatibility) tidak sepenuhnya terjaga. Salah satu perbedaan terbesar adalah cara Python 3 menangani string; Python 3 memperlakukan string sebagai unicode secara default, yang meningkatkan kemampuannya dalam penanganan teks multibahasa . Selain itu, Python 3 memperbaiki banyak "quirks" dari versi sebelumnya, seperti penghapusan `print` sebagai keyword dan menjadikannya fungsi, serta pengenalan `type hinting` yang lebih kuat untuk meningkatkan keterbacaan dan pemeliharaan kode [3].
-
-### Mengapa Python Banyak Digunakan oleh Programmer?
-
-Ada beberapa alasan mengapa Python menjadi bahasa pemrograman yang sangat populer. Pertama, Python dikenal dengan sintaks yang sederhana dan mudah dibaca, sehingga programmer dari berbagai tingkat pengalaman, terutama pemula, dapat dengan cepat memahami logika program tanpa harus berkutat dengan aturan sintaks yang rumit . Selain itu, Python mendukung paradigma pemrograman multiparadigm, termasuk pemrograman berorientasi objek, pemrograman prosedural, dan pemrograman fungsional, sehingga membuatnya sangat fleksibel untuk berbagai jenis proyek .
-
-Kedua, Python memiliki ekosistem yang kaya dengan berbagai library dan framework yang memudahkan pengembangan aplikasi secara cepat. Sebagai contoh, dalam bidang kecerdasan buatan dan machine learning, Python menyediakan pustaka terkenal seperti TensorFlow, Keras, dan scikit-learn, yang membuat pengembangan model AI menjadi lebih mudah dan cepat [4]. Dalam data science, pustaka seperti Pandas dan NumPy menjadi standar de facto untuk analisis dan manipulasi data .
-
-Komunitas Python yang besar dan aktif juga menjadi salah satu alasan mengapa Python sangat populer. Komunitas ini tidak hanya berkontribusi dalam pengembangan Python itu sendiri, tetapi juga menyediakan ribuan tutorial, dokumentasi, dan sumber daya lainnya, sehingga membuat pembelajaran dan penyelesaian masalah menjadi lebih mudah. Selain itu, Python adalah bahasa yang cross-platform, yang artinya program yang ditulis di Python dapat berjalan di berbagai sistem operasi seperti Windows, macOS, dan Linux tanpa banyak penyesuaian .
-
-### Contoh Penerapan Python dalam Pemrograman
-
-Salah satu penerapan paling signifikan Python adalah di bidang data science dan big data. Pustaka seperti Pandas digunakan untuk manipulasi data, sedangkan NumPy sangat berguna dalam komputasi numerik yang efisien . Python juga menjadi bahasa pilihan dalam kecerdasan buatan dan machine learning, di mana pustaka seperti scikit-learn dan TensorFlow mempermudah pengembangan model pembelajaran mesin, mulai dari regresi sederhana hingga jaringan saraf tiruan yang kompleks.
-
-Dalam pengembangan aplikasi web, framework Django dan Flask memungkinkan pengembangan aplikasi dengan cepat dan mudah, sambil tetap mempertahankan skalabilitas dan keamanannya. Django, misalnya, mendukung ORM (Object-Relational Mapping) yang mempermudah interaksi dengan database tanpa harus menulis query SQL secara langsung . Sementara Flask lebih ringan dan fleksibel, cocok untuk aplikasi yang lebih kecil atau proyek yang memerlukan kustomisasi lebih mendalam.
-
-Python juga banyak digunakan dalam automasi sistem, misalnya untuk menulis skrip yang mengotomatisasi tugas-tugas rutin seperti pemrosesan file, pengelolaan server, hingga crawling data dari web. Dengan dukungan pustaka seperti Selenium dan BeautifulSoup, Python menjadi alat yang sangat efisien dalam pengembangan bot atau skrip untuk web scraping [5].
-
-### Variabel dan Tipe Data
-
-Dalam Python kita dapat menyimpan data dalam memori menggunakan variabel. Dalam penulisan variabel terdapat aturan-aturan yang harus diikuti seperti menggunakan huruf, angka, underscore, dan awalan variabel tidak dimulai dengan angka.
-
-```
-x = 10
-y = 3.14
-z = "Data Science"
-
-user_age = 20
-pi_value = 3.14159
-course_name = "Python for Data Science"
-```
-
-Di atas merupakan tipe-tipe data yang ada dalam Python diantaranya:
-
-- Integer (int): Tipe data yang berisi bilangan bulat.
-- Float: Tipe data yang berisikan bilangan desimal.
-- String (str): Kumpulan dari char yang membentuk sebuah kalimat.
-- Boolean (bool): Tipe data yang outputnya True atau False.
-
-```
-#integer (int)
-age = 25
-
-# Floats
-height = 1.67
-
-# Strings
-name = "Rizal"
-
-# Booleans
-is_student = True
-
-print(type(age))
-print(type(height))
-print(type(name))
-print(type(is_student))
-```
-
-### Operator dan Logika
-
-Operator dalam Python sama dengan operator dalam matematika. Berikut operatornya:
-
-#### Operator Aritmatika
-
-Operator yang digunakan seperti berikut:
-
-- +, -, *, / (penjumlahan, pengurangan, kali, bagi)
-- // (pembagian bulat)
-- % (modulus)
-- ** (perpangkatan)
-
-```
-a = 10
-b = 3
-
-# Penjumlahan
-print(a + b)
-
-# Pembagian
-print(a / b)
-
-# Pembagian bulat
-print(a // b)
-
-# Eksponensial
-print(a ** b) 
-```
-
-#### Operator Perbandingan
-
-Operator perbandingan digunakan untuk membandingkan dua nilai yang hasilnya berupa Boolean. Adapun operator perbandingan yang digunakan dalam Python seperti berikut:
-
-- != (tidak sama dengan)
-- == (sama dengan)
-- >, <, >=, <= (perbandingan nilai)
-
-```
-print(a > b) # Output: True
-
-print(a == b) # Output: False
-
-print(a >= b) # Output: True
-
-print(a <= b) # Output: False
-```
-
-#### Operator Logika
-
-Operator logika ini digunakan untuk menggabungkan ekspresi yang dihasilkan dari Boolean sesuai dengan aturan yang telah ada.
+Pengolahan data dengan Python merupakan salah satu keterampilan yang sangat berharga di era informasi saat ini. Dengan semakin banyaknya data yang tersedia, kemampuan untuk mengolah dan menganalisis data menjadi krusial dalam berbagai bidang, termasuk bisnis, sains, dan teknologi. Dalam konteks ini, Python muncul sebagai bahasa pemrograman yang sangat populer dan efektif untuk pengolahan data. Berikut adalah beberapa konsep dan teknik penting dalam pengolahan data dengan Python.
 
 <p align="center">
-  <img src="https://github.com/rizaledc/IPSD-Assigment/blob/main/Modul%201/Assets/Operator%20Logika.png" alt="Alt Text">
+  <img src="https://github.com/rizaledc/IPSD-Assigment/blob/main/Modul%202/Assets/Ilustrasi%20Gambar.jpeg" alt="Alt Text">
 </p> 
 <p align="center">
- Gambar 2. Penggabungan Operator Logika
+ Gambar 1. Ilustrasi Pengolahan Data dengan Python
 </p> 
 
-```
-x = True
-y = False
-print(x and y)
-print(x or y)
-```
+### Menggunakan Pandas : Struktur Data yang Baik
 
-#### Fungsi
+Pandas adalah salah satu pustaka Python yang paling banyak digunakan untuk analisis data. Pustaka ini menyediakan dua struktur data utama: Series dan DataFrame. Series adalah struktur satu dimensi yang mirip dengan array atau daftar, sementara DataFrame adalah struktur dua dimensi yang mirip dengan tabel atau spreadsheet. DataFrame memungkinkan pengguna untuk menyimpan data dalam format yang lebih terorganisir, memudahkan pengolahan data.
 
-Dalam Python, fungsi (function) adalah blok kode yang terorganisir dan dapat digunakan kembali untuk melakukan tugas tertentu. Fungsi digunakan untuk membagi program menjadi bagian-bagian yang lebih kecil dan lebih terstruktur, sehingga memudahkan pemeliharaan dan penggunaan kembali kode. Fungsi dapat menerima input (disebut argumen), melakukan operasi tertentu, dan mengembalikan output (disebut return value).
+Contoh penggunaan Pandas untuk membaca data dari file CSV:
 
 ```
-# Definisi fungsi sederhana
-def greet(name):
- return f"Hello, {name}!"
-# Memanggil fungsi
-print(greet("Rizal"))
+import pandas as pd
+
+# Membaca file CSV
+data = pd.read_csv('data.csv')
 ```
 
-#### Perulangan (Loops)
+### Pembersihan Data
 
-Perulangan atau loop dalam Python adalah struktur kontrol yang memungkinkan eksekusi berulang dari blok kode tertentu selama kondisi tertentu terpenuhi. Adapun dua jenis loop yang sering digunakan:
+Salah satu langkah awal yang penting dalam pengolahan data adalah pembersihan data. Data yang tidak bersih dapat menyebabkan hasil analisis yang salah. Dalam Pandas, ada beberapa fungsi untuk membantu pembersihan data, seperti:
 
-- For Loop --> digunakan dalam list, tuple, dictionary, dan range.
-```
-fruits = ["apple", "banana", "cherry"]
-for fruit in fruits:
- print(fruit)
-```
-- While Loop --> loop yang dilakukan untuk memenuhi kondisi tertentu.
-```
-counter = 0
-while counter < 3:
- print(counter)
- counter += 1
-```
-- List Comprehension --> menulis loop yang menghasilkan list.
-```
-numbers = [1, 2, 3, 4, 5]
-doubled = [x * 2 for x in numbers]
-print(doubled)
-```
-
-#### Percabangan
-
-Percabangan atau kondisional dalam Python adalah struktur kontrol yang memungkinkan program untuk membuat keputusan berdasarkan kondisi tertentu. Berdasarkan hasil evaluasi kondisi tersebut (benar atau salah), program akan mengeksekusi satu blok kode atau blok lainnya. Struktur percabangan utama dalam Python adalah if, elif, dan else.
-
-1. if: Memeriksa kondisi. Jika kondisi benar (True), maka blok kode di dalamnya akan dijalankan.
-2. elif: (singkatan dari "else if") Memeriksa kondisi lain jika kondisi sebelumnya salah. Ini digunakan untuk memeriksa beberapa kondisi.
-3. else: Menjalankan kode jika semua kondisi sebelumnya salah.
+dropna(): Menghapus baris atau kolom yang memiliki nilai hilang.
+fillna(): Mengganti nilai hilang dengan nilai tertentu, seperti rata-rata kolom.
+duplicated(): Menemukan dan menghapus duplikat dalam dataset.
 
 ```
-score = 85
-if score >= 90:
- print("A")
-elif score >= 80:
- print("B")
-else:
- print("C")
+# Menghapus baris dengan nilai hilang
+data_cleaned = data.dropna()
+
+# Mengganti nilai hilang dengan rata-rata kolom
+data['kolom'] = data['kolom'].fillna(data['kolom'].mean())
 ```
 
-Nested Conditionals (Percabangan bersarang atau percabangan dalam percabangan)
+### Eksplorasi Data
+
+Setelah data dibersihkan, langkah selanjutnya adalah eksplorasi data. Ini mencakup analisis deskriptif untuk mendapatkan pemahaman yang lebih baik tentang dataset. Fungsi seperti describe(), info(), dan visualisasi data menggunakan pustaka seperti Matplotlib dan Seaborn sangat membantu dalam fase ini.
 
 ```
-score = 85
-attendance = 90
-if score >= 80:
- if attendance >= 85:
- print("Lulus dengan nilai baik")
- else:
- print("Kehadiran kurang")
-else:
- print("Tidak lulus")
+# Melihat ringkasan statistik
+print(data.describe())
+
+# Menghitung frekuensi nilai
+print(data['kolom'].value_counts())
 ```
 
-Sebagai bahasa pemrograman yang telah berkembang selama lebih dari tiga dekade, Python telah berhasil menjadi salah satu bahasa yang paling populer di dunia teknologi. Kelebihannya yang mencakup sintaks yang sederhana, kemampuan lintas platform, serta ekosistem pustaka yang luas menjadikannya pilihan utama bagi pemula maupun profesional. Mulai dari data science, kecerdasan buatan, hingga pengembangan web dan otomasi sistem, Python menawarkan fleksibilitas dan kekuatan untuk berbagai jenis aplikasi. Dengan komunitas yang terus berkembang dan inovasi yang terus diperkenalkan, Python akan tetap menjadi pilar penting dalam dunia pemrograman modern di masa depan.
+### Visualisasi Data
+
+Visualisasi merupakan alat yang kuat untuk memahami data. Dengan menggunakan pustaka seperti Matplotlib dan Seaborn, kita dapat membuat grafik dan diagram yang membantu dalam mengidentifikasi pola, tren, dan outlier dalam data.
+
+Contoh sederhana visualisasi menggunakan Matplotlib:
+```
+import matplotlib.pyplot as plt
+
+# Membuat histogram
+plt.hist(data['kolom'], bins=10)
+plt.title('Histogram Kolom')
+plt.xlabel('Nilai')
+plt.ylabel('Frekuensi')
+plt.show()
+```
+
+#### Transformasi Data
+
+Transformasi data melibatkan perubahan format atau struktur data untuk analisis lebih lanjut. Ini bisa mencakup normalisasi, pengkodean kategori, dan agregasi. Pustaka Pandas menyediakan banyak fungsi untuk transformasi data, seperti groupby(), pivot_table(), dan apply().
+
+Contoh agregasi dengan groupby():
+```
+# Menghitung rata-rata berdasarkan kategori
+rata_rata = data.groupby('kategori')['kolom'].mean()
+print(rata_rata)
+```
+
+#### Analisis Data
+
+Setelah melakukan eksplorasi dan transformasi, langkah berikutnya adalah analisis data. Ini bisa mencakup analisis statistik, regresi, klasifikasi, atau teknik pembelajaran mesin. Pustaka seperti Scikit-learn dan Statsmodels sangat membantu dalam melakukan analisis ini.
+
+Contoh sederhana regresi linier menggunakan Scikit-learn:
+```
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+
+X = data[['fitur1', 'fitur2']]
+y = data['target']
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+
+model = LinearRegression()
+model.fit(X_train, y_train)
+
+predictions = model.predict(X_test)
+```
+#### Penyimpanan dan Eksplorasi Data
+
+Setelah proses analisis selesai, Anda mungkin ingin menyimpan hasilnya. Pandas memudahkan untuk menyimpan data ke dalam berbagai format, seperti CSV, Excel, atau SQL.
+
+```
+data_cleaned.to_csv('data_cleaned.csv', index=False)
+```
+
+Pengolahan data dengan Python melibatkan berbagai langkah, mulai dari pembacaan data, pembersihan, eksplorasi, visualisasi, hingga analisis dan penyimpanan. Dengan menggunakan pustaka seperti Pandas, Matplotlib, Seaborn, dan Scikit-learn, pengguna dapat melakukan berbagai jenis analisis data secara efisien. Keahlian dalam pengolahan data akan memberikan wawasan berharga yang dapat digunakan untuk pengambilan keputusan yang lebih baik di berbagai bidang.
 
 ### 1. Guided 1
 
@@ -323,7 +224,7 @@ Pada kode di atas, dibuatkan dua class yaitu class Person yang menerima satu par
 
 ### Soal 1
 
-####  Buatlah program yang dapat menghasilkan pola berbentuk angka seperti di bawah ini, dengan syarat angka yang ditampilkan adalah hasil dari penjumlahan bilangan prima sebelumnya:
+####   Load data (movie classification)
 
 1
 
